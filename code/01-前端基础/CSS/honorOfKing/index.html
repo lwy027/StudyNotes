@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="robit" content="all" />
+    <meta name="description" content="王者荣耀，每个人都玩" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <style>
+      .top-bar {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        width: 980px;
+        height: 42px;
+      }
+      .right-logo {
+        margin-left: 20px;
+      }
+      .right-logo:hover {
+        position: absolute;
+        z-index: 99;
+
+        background: url(./image/big-logo.jpg);
+        width: 970px;
+        height: 185px;
+      }
+      .top-bar-right-area {
+        position: relative;
+        right: -100px;
+        width: 300px;
+        height: 41px;
+
+        padding-left: 30px;
+        padding-right: 50px;
+      }
+
+      .top-bar-right-area a {
+        color: #464646;
+        line-height: 41px;
+      }
+      .top-bar-right-area .icon-grow {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        width: 30px;
+        height: 30px;
+        background: url(./image/title_sprite.png) no-repeat -30px 0;
+      }
+      .top-bar-right-area .right-rank {
+        position: relative;
+        left: 20px;
+      }
+      .top-bar-right-area .right-rank::after {
+        content: "";
+        position: absolute;
+
+        right: -25px;
+        top: 3px;
+        bottom: 0;
+        margin: auto 0;
+        width: 30px;
+        height: 30px;
+        background: url(./image/title_sprite.png) no-repeat 0 0;
+        transform: rotate(90deg);
+        opacity: 0.5;
+      }
+      .bgc {
+        width: 1920px;
+        height: 1100px;
+        position: absolute;
+        z-index: -9999999;
+        background-image: url(./image/bgi.jpg);
+      }
+      /* top-bottomcss样式 */
+      .top-buttom {
+        height: 84px;
+        background-color: rgb(0, 0, 0, 0.8);
+        display: flex;
+        align-items: center;
+      }
+      .top-buttom ul {
+        box-sizing: border-box;
+        padding-top: 50px;
+        width: 1300px;
+        height: 84px;
+
+        display: flex;
+        margin-left: 30px;
+        align-items: center;
+        /* justify-content: space-between; */
+      }
+      .top-buttom ul li a span {
+        color: #c9c9dd;
+        font-size: 12px;
+        display: block;
+        width: 110px;
+        height: 64px;
+      }
+      .top-buttom .king {
+        text-indent: -999999px;
+        margin-left: 124px;
+        width: 220px;
+        height: 52px;
+        background: url(./image/king-logo\ .png) no-repeat;
+      }
+      .top-buttom ul > li:last-child {
+        display: flex;
+        margin-bottom: 50px;
+      }
+      /* 新闻部分 */
+      .news-section {
+        display: flex;
+
+        width: 1200px;
+        height: 342px;
+        /* background-color: orange; */
+
+        margin: 0 auto;
+        position: relative;
+        top: 450px;
+      }
+      .news-left img {
+        display: block;
+      }
+      .news-left ul {
+        height: 44px;
+        display: flex;
+        justify-content: space-evenly;
+        padding-top: 10px;
+        background-color: #000;
+      }
+      /* nesws右边 */
+      .news-right {
+        display: flex;
+      }
+      .news-right .left {
+        width: 359px;
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+      .news-right .left .left-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 325px;
+        height: 49px;
+
+        margin: 0 auto;
+      }
+      .news-right .left .left-bar > li a {
+        color: aliceblue;
+      }
+      .news-right .left .left-bar > li :hover {
+        color: gold;
+        border-bottom: 3px solid gold;
+      }
+      .news-right .left .line {
+        display: block;
+        width: 325px;
+        margin: 0 auto;
+        border-top: 1px solid black;
+      }
+      .news-right .left .left-buttom {
+        width: 359px;
+        height: 292.5px;
+        margin: 0 auto;
+        margin-left: 20px;
+      }
+      .news-right .left .left-buttom li {
+        padding-top: 12px;
+      }
+
+      .news-right .right .box1 {
+        position: relative;
+        width: 236px;
+        height: 128px;
+        background-image: url(./image/loadDown.png);
+        background-position: 0 -219px;
+      }
+      .news-right .right .box2 {
+        width: 236px;
+        height: 106px;
+        background-image: url(./image/loadDown.png);
+        background-position: 0 -350px;
+      }
+      .news-right .right .box3 {
+        width: 236px;
+        height: 108px;
+        background-image: url(./image/loadDown.png);
+        background-position: 0 -461px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top">
+      <div class="top-bar">
+        <div class="top-bar-lefe-area">
+          <a href="#" id="">
+            <img
+              src="./image/logo.png"
+              alt="腾讯游戏logo"
+              title="腾讯游戏logo"
+            />
+          </a>
+          <a href="">
+            <img src="./image/left-image.jpg" alt="" class="right-logo" />
+          </a>
+        </div>
+        <div class="top-bar-right-area">
+          <a href="">
+            <i class="icon-grow"></i>
+            成长守护平台</a
+          >
+          <a href="" class="right-rank">腾讯游戏排行榜</a>
+        </div>
+      </div>
+      <!-- top-buttomhtml结构 -->
+      <div class="bgc"></div>
+      <div class="top-buttom">
+        <h1 class="king">
+          <a href="#">王者荣耀</a>
+        </h1>
+        <ul>
+          <li>
+            <a href="#">游戏资料 <span>DATA</span></a>
+          </li>
+          <li>
+            <a href="#">内容中心 <span>CONTENTS</span></a>
+          </li>
+          <li>
+            <a href="#">赛事中心 <span>MATCH</span></a>
+          </li>
+          <li>
+            <a href="#">百态王者 <span>CULRTUE</span></a>
+          </li>
+          <li>
+            <a href="#">社区互动 <span>COMMUNITY</span></a>
+          </li>
+          <li>
+            <a href="#">玩家支持 <span>PLAYER</span></a>
+          </li>
+          <li>
+            <a href="#">IP新游 <span>NEWGAMES</span></a>
+          </li>
+          <li>
+            <img src="./image/head.png" alt="" width="43.6px" height="43.6px" />
+
+            <a href="#">欢迎登录 <br />登录后可查看游戏战绩 </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- 内容 -->
+    <div class="news-section">
+      <div class="news-left">
+        <img src="./image/news-bar.jpeg" alt="" />
+        <ul>
+          <li>
+            <a href="#">小兵工厂TGC</a>
+          </li>
+          <li>
+            <a href="#">英雄盛会现场</a>
+          </li>
+          <li><a href="#">小满的摸鱼日常</a></li>
+          <li><a href="#">高校联赛开赛</a></li>
+          <li><a href="#">荣耀大话王</a></li>
+        </ul>
+      </div>
+      <div class="news-right">
+        <div class="left">
+          <ul class="left-bar">
+            <li><a href="#">热门</a></li>
+            <li><a href="">新闻</a></li>
+            <li><a href="">公告</a></li>
+            <li><a href="">活动</a></li>
+            <li><a href="">赛事</a></li>
+            <li>
+              <a href="">...</a>
+            </li>
+          </ul>
+          <i class="line"> </i>
+          <ul class="left-buttom">
+            <li><a href="">秘！来自李元芳的王者荣耀英雄盛会现场报道</a></li>
+            <li><a href="">4月15日正式服“东方来客”版本更新公告</a></li>
+            <li><a href="">星梦设计大赛特别创意奖公布</a></li>
+            <li><a href="">星梦设计大赛特别创意奖公布</a></li>
+            <li><a href="">星梦设计大赛特别创意奖公布</a></li>
+            <li><a href="">星梦设计大赛特别创意奖公布</a></li>
+            <li><a href="">星梦设计大赛特别创意奖公布</a></li>
+            <li><a href="">星梦设计大赛特别创意奖公布</a></li>
+          </ul>
+        </div>
+        <div class="right">
+          <div class="box1"></div>
+          <div class="box2"></div>
+          <div class="box3"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

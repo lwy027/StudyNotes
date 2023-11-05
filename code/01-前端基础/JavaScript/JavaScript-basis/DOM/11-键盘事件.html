@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" />
+    <button>搜索</button>
+
+    <script>
+      var inpuEl = document.querySelector("input");
+      var btnEl = document.querySelector("button");
+
+      btnEl.onclick = function (event) {
+        console.log("搜索", inpuEl.value, event.code);
+      };
+      window.onkeyup = function (event) {
+        // console.log("键盘事件", event.code);
+        if (event.code === "KeyS") {
+          inpuEl.focus();
+        }
+      };
+    </script>
+  </body>
+</html>

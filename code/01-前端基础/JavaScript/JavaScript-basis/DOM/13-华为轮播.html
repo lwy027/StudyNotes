@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        width: 1536px;
+        height: 550px;
+        display: flex;
+        position: relative;
+        /* transform: translate(-50%);
+        left: 50%; */
+      }
+      img {
+        display: block;
+        width: 1536px;
+        height: 550px;
+        position: relative;
+      }
+      .btn-left,
+      .btn-right {
+        position: absolute;
+        top: 25%;
+        transform: translate(0, 50%);
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        background-color: #f00;
+        cursor: pointer;
+      }
+      .btn-right {
+        right: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img src="./img/ddfc89a75d3c4bbf83079fc9efc29f62.webp" alt="" />
+      <img src="./img/c8384c51ee0e40cebb1f1d460c9a1280.webp" alt="" />
+      <img src="./img/92e69be1f8de4de880d7d4a10b747543.webp" alt="" />
+      <img src="./img/63030eaa127a42d7b8b16759de9b7da4.webp" alt="" />
+      <img src="./img/54efd996a6914b5abe0a2658f8c262ff.webp" alt="" />
+      <img src="./img/51be06919f714651a369c6b886fb4e7a.webp" alt="" />
+      <img src="./img/ddfc89a75d3c4bbf83079fc9efc29f62.webp" alt="" />
+    </div>
+    <div class="btn-left"></div>
+    <div class="btn-right"></div>
+
+    <script>
+      var btnLeft = document.querySelector(".btn-left");
+      var btnRight = document.querySelector(".btn-right");
+      var container = document.querySelector(".container");
+
+      var idx = 0;
+      btnRight.onclick = function () {
+        timer();
+      };
+      function timer() {
+        container.style.transition = "all 1s ease";
+        idx++;
+
+        if (idx === 5) {
+          setTimeout(() => {
+            idx = 0;
+            container.style.left = -idx * 1537 + "px";
+            container.style.transition = "none";
+          }, 500);
+        } else {
+          container.style.left = -idx * 1537 + "px";
+        }
+      }
+
+      btnLeft.onclick = function () {
+        if (idx === 0) {
+          idx = 5;
+          container.style.left = -idx * 1537 + "px";
+          container.style.transition = "none";
+        } else {
+          container.style.transition = "all 1s ease";
+          idx--;
+          container.style.left = -idx * 1537 + "px";
+        }
+      };
+    </script>
+  </body>
+</html>

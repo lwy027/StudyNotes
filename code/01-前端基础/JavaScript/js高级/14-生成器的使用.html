@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+       生成器函数：
+       1.function函数后会你会跟上符号：*
+       2.代码执行可以被yield控制,
+       3.生成器函数默认在执行时，需要返回一个生成器对象
+          *要想执行函数内部的代码，需要生成器对象，调用它的next操作
+          *当遇到yield时，就会中断执行
+        4.生成器可以传递参数，比如执行第二段代码时，需要传入参数，那么需要在第一个yield定义变量，在第二段代码接收，第一段代码通过函数传值接受收
+      */
+      function* generator(name1) {
+        console.log("111", name1);
+        console.log("222");
+
+        const name2 = yield "aa";
+        console.log("333", name2);
+        console.log("444");
+
+        const name3 = yield "aaa";
+        console.log("666", name3);
+        console.log("777");
+      }
+      const Generator = generator("next1");
+      //执行到第一个yield并且停止，返回值value =200
+      console.log(Generator.next());
+      //执行到第二个yield并且停止
+      console.log(Generator.next("next2"));
+      //执行到第三个yield并且停止
+      console.log(Generator.next("next3"));
+    </script>
+  </body>
+</html>

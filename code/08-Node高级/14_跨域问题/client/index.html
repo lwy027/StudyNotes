@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>网易云项目</h2>
+
+    <script>
+      //先对代理服务器进行请求(api是代理服务器的路径)代理服务器在为我们转发请求到真正的地址
+      fetch("http://localhost:9000/api/user/list").then(async (res) => {
+        const result = await res.json();
+        console.log(result);
+      });
+    </script>
+  </body>
+</html>

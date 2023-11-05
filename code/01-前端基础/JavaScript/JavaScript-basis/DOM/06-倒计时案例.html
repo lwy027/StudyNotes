@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .time {
+        background-color: #f00;
+        color: #fff;
+        font-size: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <span class="time hours">:</span>
+      <span class="split">: </span>
+      <span class="time minutes"></span>
+      <span class="split">: </span>
+      <span class="time seconds"></span>
+    </div>
+  </body>
+
+  <script>
+    var hours = document.querySelector(".hours");
+    var minutes = document.querySelector(".minutes");
+    var seconds = document.querySelector(".seconds");
+
+    setInterval(() => {
+      var nowTime = new Date();
+      var endTime = new Date();
+
+      endTime.setHours(13);
+      endTime.setMinutes(10);
+      endTime.setSeconds(0);
+      //实现倒计时，要设置未来的时间减去现在的时间
+      var countDown = (endTime.getTime() - nowTime.getTime()) / 1000;
+      //通过计算获取小时，分钟，秒
+      var Hours = Math.floor(countDown / 3600);
+      var Minutes = Math.floor((countDown / 60) % 60);
+      var Seconds = Math.floor(countDown % 60);
+
+      hours.textContent = Hours;
+      minutes.textContent = Minutes;
+      seconds.textContent = Seconds;
+    }, 1000);
+  </script>
+</html>

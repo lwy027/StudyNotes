@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // const friends = ["james", "jake", "aaa"];
+      //迭代器
+      // function iterator(arr) {
+      //   let index = 0;
+      //   return {
+      //     next: () => {
+      //       if (index < arr.length) {
+      //         return { done: false, value: arr[index++] };
+      //       } else {
+      //         return { done: true, value: undefined };
+      //       }
+      //     },
+      //   };
+      // }
+
+      // const arrIterator = iterator(friends);
+      // console.log(arrIterator.next());
+      // console.log(arrIterator.next());
+      // console.log(arrIterator.next());
+      // console.log(arrIterator.next());
+
+      //可迭代对象
+
+      const infos = {
+        name: "james",
+        age: 20,
+        sex: "男",
+        [Symbol.iterator]: function () {
+          let obj = Object.entries(infos);
+
+          let index = 0;
+          return {
+            next: () => {
+              if (index < obj.length) {
+                return { done: false, value: obj[index++] };
+              } else {
+                return { done: true, value: undefined };
+              }
+            },
+          };
+        },
+      };
+      const objIterator = infos[Symbol.iterator]();
+      // console.log(objIterator.next());
+      // console.log(objIterator.next());
+      // console.log(objIterator.next());
+      // console.log(objIterator.next());
+
+      for (let item of infos) {
+        const [key, value] = item;
+        console.log(key, value);
+      }
+    </script>
+  </body>
+</html>

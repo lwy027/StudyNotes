@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" name="" id="" />
+
+    <script>
+      const inputEl = document.querySelector("input");
+      let count = 0;
+
+      function wydeboundce(fn, delay) {
+        //用于记录上一次事件触发的time
+        let time = null;
+        //触发事件执行的函数
+        function debounce(...args) {
+          //如果有再次触发(或者多次)事件，那么取消上一次触发事件
+          if (time) clearTimeout(time);
+          //延迟执行对应的fn函数(传入的回调函数)
+          //延迟执行对应的fn函数(传入的回调函数)
+          time = setTimeout(() => {
+            //绑定this
+            fn.apply(this, args);
+            time = null; //执行过函数执行重置time
+          }, delay);
+        }
+        return debounce;
+      }
+
+      inputEl.oninput = wydeboundce(function (event) {
+        console.log(`触发了事件${count++}`, this.value, event);
+      }, 3000);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+@main-color: red;
+.container {
+  width: 200px;
+  background-color: #00f;
+  .box {
+    width: 100%-50%;
+    height: 200px;
+    background-color: #0f0;
+    color: @main-color;
+  }
+  & {
+    background-color: purple;
+  }
+  border: 1px solid;
+}
+.colors() {
+  primarycolor: red;
+  lastcolor: skyblue;
+}
+.box1 {
+  margin-top: 10px;
+  width: 222px;
+  height: 220px;
+  .container();
+  background-color: .colors[primarycolor];
+}

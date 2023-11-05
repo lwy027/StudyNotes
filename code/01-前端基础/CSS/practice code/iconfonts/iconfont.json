@@ -1,0 +1,37 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "588416",
+      "name": "music",
+      "font_class": "music",
+      "unicode": "e657",
+      "unicode_decimal": 58967
+    },
+    {
+      "icon_id": "1174319",
+      "name": "music",
+      "font_class": "music1",
+      "unicode": "e66a",
+      "unicode_decimal": 58986
+    },
+    {
+      "icon_id": "6145935",
+      "name": "music",
+      "font_class": "music2",
+      "unicode": "e704",
+      "unicode_decimal": 59140
+    },
+    {
+      "icon_id": "11132354",
+      "name": "music",
+      "font_class": "music3",
+      "unicode": "e654",
+      "unicode_decimal": 58964
+    }
+  ]
+}

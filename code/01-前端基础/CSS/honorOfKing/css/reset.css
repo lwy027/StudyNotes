@@ -1,0 +1,13 @@
+body,
+a,
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style-type: none;
+  color: aliceblue;
+  font: 14px/1.5 Tahoma, "simsun", sans-serif;
+  color: white;
+box-sizing: border-box;
+}

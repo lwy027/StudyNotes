@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+
+  <div id="app">
+    <h2>{{title}}</h2>
+    <ul>
+      <li v-for="item in movies">{{item}} </li>
+    </ul>
+    <p>{{counter}} </p>
+    <button @click="incream()">+1</button>
+    <button @click="decream()"> -1</button>
+  </div>
+
+  <script src="../lib/Vue.js"></script>
+
+  <script>
+
+    const app = Vue.createApp({
+
+      data() {
+        return {
+          title: "我是标题",
+          counter: 0,
+          movies: ['星球大战', '行尸走肉', "行尸之惧"]
+        }
+      },
+      methods: {
+        decream() {
+          this.counter--
+        },
+        incream() {
+          this.counter++
+        }
+      }
+    })
+
+
+    app.mount("#app")
+
+
+
+  </script>
+
+</body>
+
+</html>

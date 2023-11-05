@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .active {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script src="../lib/react.js"></script>
+    <script src="../lib/react-dom.js"></script>
+    <script src="../lib/babel.js"></script>
+
+    <script type="text/babel">
+      class App extends React.Component {
+        constructor() {
+          super();
+          this.state = {
+            movies: ["星际穿越", "星球大战", "流浪地球", "巨齿鲨"],
+            currentIndex: 0,
+          };
+        }
+
+        itemChange(e, index) {
+          // e.target.classList.toggle("active");
+          // e.target.classList.remove("active");
+          this.setState({ currentIndex: index });
+        }
+        render() {
+          const { movies, currentIndex } = this.state;
+          return (
+            <div>
+              <ul>
+                {movies.map((item, index) => {
+                  return (
+                    <li
+                      key={index}
+                      className={currentIndex === index ? "active" : ""}
+                      onClick={(e) => this.itemChange(e, index)}
+                    >
+                      {item}{" "}
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          );
+        }
+      }
+
+      const root = ReactDOM.createRoot(document.querySelector("#root"));
+
+      root.render(<App />);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //将Infos变成一个可迭代对象
+      /*
+       1.必须实现一个特定函数 [Symbol.iterator]
+       2.这个函数需要返回一个迭代器(这个迭代器用于迭代当前对象)
+          这样就是先了一个可迭代对象
+      */
+      const infos = {
+        friends: ["lwy", "james", "jake", "john"],
+        [Symbol.iterator]: function () {
+          let index = 0;
+
+          return {
+            next: () => {
+              if (index < this.friends.length) {
+                return { done: false, value: this.friends[index++] };
+              } else {
+                return { done: true, value: undefined };
+              }
+            },
+          };
+        },
+      };
+
+      const infosIterator = infos[Symbol.iterator]();
+      console.log(infosIterator.next());
+      console.log(infosIterator.next());
+      console.log(infosIterator.next());
+      console.log(infosIterator.next());
+
+      //可迭代对象可以使用for..of遍历
+      // for (let value of infos) {
+      //   console.log(value);
+      // }
+
+      //数组内部就是使用迭代器实现，所有可以使用for..of
+      // const arr = ["abc", "ckk", "lll"];
+      // console.log(arr[Symbol.iterator]().next());
+      // console.log(arr[Symbol.iterator]().next());
+      // console.log(arr[Symbol.iterator]().next());
+      // console.log(arr[Symbol.iterator]().next());
+    </script>
+  </body>
+</html>

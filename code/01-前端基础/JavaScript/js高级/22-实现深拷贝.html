@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //定义一个判断是否是对象的函数
+      function isObject(obj) {
+        return (
+          obj !== null && (typeof obj === "object" || typeof obj === "Function")
+        );
+        //返回布尔值
+      }
+
+      function deepcopy(originValue) {
+        //1.如果是原始类型执行返回
+        if (!isObject(originValue)) {
+          return originValue;
+        }
+        //2.如果是对象类型才需要创建对象
+        //判断是数组还是对象
+        const newObj = Array.isArray(originValue) ? [] : {};
+        //对象里面还有基本类型值和对象类型，所有进行递归调用
+        for (let key in originValue) {
+          newObj[key] = deepcopy(originValue[key]);
+        }
+        //3.如果是函数类型不需要进行深拷贝
+        if (typeof originValue === "function") {
+          return;
+        }
+        //如果是set类型
+        if (originValue instanceof Set) {
+          const newSet = new Set();
+          for (let value of originValue) {
+            newSet.add(value);
+          }
+          return newSet;
+        }
+
+        return newObj;
+      }
+
+      const info = {
+        name: "lwy",
+        age: 18,
+        friends: {
+          name: "kobe",
+          age: 18,
+          adress: {
+            main: "美国",
+            detail: "洛杉矶",
+          },
+        },
+      };
+      const infoDeeep = deepcopy(info);
+      console.log(infoDeeep);
+    </script>
+  </body>
+</html>

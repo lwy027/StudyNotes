@@ -1,0 +1,28 @@
+.container {
+  width: 200px;
+  background-color: #00f;
+  background-color: purple;
+  border: 1px solid;
+}
+.container .box {
+  width: 50%;
+  height: 200px;
+  background-color: #0f0;
+  color: red;
+}
+.box1 {
+  margin-top: 10px;
+  width: 222px;
+  height: 220px;
+  width: 200px;
+  background-color: #00f;
+  background-color: purple;
+  border: 1px solid;
+  background-color: red;
+}
+.box1 .box {
+  width: 50%;
+  height: 200px;
+  background-color: #0f0;
+  color: red;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 请输入：<input type="text" name="" id="" />
+    <p class="tips">请输入正确的要求</p> -->
+    <script>
+      // const regExp = new RegExp();
+
+      // const res1 = /abc/gi;
+      // const message = "lllabc oooABC ijghaAbC xhsABc";
+
+      // const res2 = re1.exec(message);
+      // console.log(res2);
+
+      // const inputEl = document.querySelector("input");
+      // const tipsEl = document.querySelector(".tips");
+
+      // inputEl.oninput = function () {
+      //   let value = this.value;
+      //   if (/^aaaaa$/.test(value)) {
+      //     tipsEl.textContent = "请重新输入";
+      //   } else {
+      //     tipsEl.textContent = "您输入的正确";
+      //   }
+      // };
+      // const newmessage = message.search(res1);
+      // console.log(newmessage);
+      // const newmessage = message.replace(res1, "bcc");
+      // console.log(newmessage);
+      // const newmessage = message.split(res1);
+      // console.log(newmessage);
+
+      // const message = "aaaxsx121555 cdvf222285 lld5d44";
+      // // const res1 = /\d+/g;
+      // // const res1 = /\s+/g;
+      // // const res1 = /\.+/g;
+      // // const res1 = /\D+/g;
+      // // const res1 = /\W+/g;
+      // const res1 = /\S+/g;
+      // console.log(message.match(res1));
+
+      // const message = "my name is lwy";
+      // if (/^my/i.test(message)) {
+      //   console.log("以my开头");
+      // }
+      // if (/lwy$/i.test(message)) {
+      //   console.log("以lwy结尾");
+      // }
+
+      const fileNames = ["abc.js", "cba.java", "nba.html", "mba.js", "aaa.jsx"];
+      const newfile = fileNames.filter((item) => {
+        return /\jsx?$/.test(item);
+      });
+      console.log(newfile);
+    </script>
+  </body>
+</html>

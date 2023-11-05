@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: #f00;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box" heigh="1.55" age="15">
+      <p data-ll="15">哈哈哈哈</p>
+    </div>
+
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+    </ul>
+
+    <button class="btn">点击</button>
+    <script>
+      var boxEl = document.querySelector(".box");
+
+      var HEl = document.createElement("h2");
+      var btn = document.querySelector(".btn");
+      HEl.innerHTML = "我是标题";
+
+      boxEl.after(HEl);
+
+      setTimeout(() => {
+        var CloneH = HEl.cloneNode(true);
+        btn.after(CloneH);
+      }, 2000);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+[
+  { "name": "推荐", "channelId": 0 },
+  { "name": "热点", "channelId": 318939899 },
+  { "name": "财经", "channelId": 3189399007 },
+  { "name": "科技", "channelId": 3189398999 },
+  { "name": "娱乐", "channelId": 3189398972 },
+  { "name": "体育", "channelId": 3189398957 },
+  { "name": "时尚", "channelId": 3189398984 },
+  { "name": "美食", "channelId": 3189399002 },
+
+  { "name": "国际", "channelId": 3189398968 },
+  { "name": "养生", "channelId": 3189398959 },
+  { "name": "旅游", "channelId": 3189398983 },
+  { "name": "军事", "channelId": 3189398960 },
+
+  { "name": "图片", "channelId": 5443492141 },
+  { "name": "育儿", "channelId": 94349549395 },
+  { "name": "历史", "channelId": 3189398965 },
+  { "name": "游戏", "channelId": 3189398995 },
+  { "name": "数码", "channelId": 3189398981 }
+]

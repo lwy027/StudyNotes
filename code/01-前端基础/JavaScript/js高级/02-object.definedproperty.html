@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var obj = {
+        name: "lwy",
+        age: 30,
+      };
+
+      Object.defineProperty(obj, "age", {
+        configurable: true,
+        enumerable: true,
+        get: function () {
+          return age;
+        },
+        set: function (value) {
+          console.log("set方法被调用了");
+          this.age = value;
+        },
+      });
+      // delete obj.age;
+
+      // for (var key in obj) {
+      //   console.log(key);
+      // }
+      obj.age = 30;
+    </script>
+  </body>
+</html>

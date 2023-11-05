@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" name="" id="" />
+
+    <script>
+      const inputEl = document.querySelector("input");
+      let count = 0;
+
+      function wythrottle(fn, interval) {
+        //定义开始时间
+        let stratTime = 0;
+        function _throttle(...args) {
+          //获取当前的时间
+          const nowTime = new Date().getTime();
+          //用执行时间-（当前时间-开始时间）
+          const waitTime = interval - (nowTime - stratTime);
+          //如果waitTime时间为=0或小于0说明 执行时间到了，那么我们执行fn
+          if (waitTime <= 0) {
+            fn.apply(this, args);
+            stratTime = nowTime;
+          }
+        }
+        return _throttle;
+      }
+
+      inputEl.oninput = wythrottle(function (event) {
+        console.log(`触发了事件${count++}`, this.value, event);
+      }, 1000);
+    </script>
+  </body>
+</html>

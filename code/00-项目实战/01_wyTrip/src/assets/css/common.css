@@ -1,0 +1,15 @@
+:root {
+  --primary-color: #ff9854;
+
+  --theme-linear-gradient: linear-gradient(90deg, #fa8c1d, #fcaf3f);
+
+}
+
+.top-page {
+  position: relative;
+  z-index: 9;
+  height: 100vh;
+  background-color: #fff;
+
+  overflow-y: auto;
+}

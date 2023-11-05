@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="../lib/react.js"></script>
+    <script src="../lib/react-dom.js"></script>
+    <script src="../lib/babel.js"></script>
+
+    <script type="text/babel">
+      class Count extends React.Component {
+        constructor() {
+          super();
+          this.state = {
+            count: 0,
+          };
+          this.decreatment = this.decreatment.bind(this);
+          this.increatment = this.increatment.bind(this);
+        }
+
+        increatment() {
+          this.setState({
+            count: this.state.count + 1,
+          });
+        }
+
+        decreatment() {
+          this.setState({
+            count: this.state.count - 1,
+          });
+        }
+
+        render() {
+          return (
+            <div>
+              <h2>{this.state.count} </h2>
+
+              <button onClick={this.increatment}>+1</button>
+              <button onClick={this.decreatment}>-1</button>
+            </div>
+          );
+        }
+      }
+
+      const root = ReactDOM.createRoot(document.querySelector("#root"));
+
+      root.render(<Count />);
+    </script>
+  </body>
+</html>

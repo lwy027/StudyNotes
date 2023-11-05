@@ -1,0 +1,13 @@
+div {
+  width: 200px;
+  height: 200px;
+  background-color: rebeccapurple;
+  font-size: 20px;
+  color: blue;
+  margin: 10px;
+}
+.Box {
+  width: 300px;
+  height: 200px;
+  background-color: aliceblue;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script type="text/babel">
+      //定义变量
+      let message = "hello wrod";
+
+      //定义按钮函数
+      function btnClick() {
+        message = "hello React";
+        //注意更改数据时，并不会实时刷新，需要重新调用函数
+        rootRender();
+      }
+      //创建react根，并且将渲染的内容挂载到html元素上
+      const root = ReactDOM.createRoot(document.querySelector("#root"));
+      //使用jsx语法
+      //注意：
+      // 1.定义变量和函数都需要使用 {}语法
+      //2.onClick要大写
+
+      rootRender();
+      function rootRender() {
+        root.render(
+          <div>
+            <h2> {message} </h2>
+            <button onClick={btnClick}>按钮</button>
+          </div>
+        );
+      }
+    </script>
+  </body>
+</html>

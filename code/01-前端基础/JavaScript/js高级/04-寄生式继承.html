@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // function Person() {}
+
+      // function student() {}
+      // var p = new Person();
+
+      // student.prototype = p.__proto__;
+      // console.log(student.prototype === Person.prototype );
+
+      // var obj = {};
+      // var info = Object.create(obj);
+      // console.log(info.__proto__===obj);
+
+      // class Person {
+      //   constructor(name, age) {
+      //     this.name = name;
+      //     this.age = age;
+      //   }
+      //   eating() {
+      //     console.log(this.name + "正在吃东西");
+      //   }
+      //   static behaviour(name) {
+      //     console.log(this.name + "正在做什么");
+      //   }
+      // }
+
+      // class Student extends Person {
+      //   constructor(name, age, height, weight) {
+      //     super(name, age);
+      //     this.weight = weight;
+      //     console.log(name, age, height, weight);
+      //   }
+      // }
+
+      // var stu = new Person("小明", 10);
+      // var stu1 = new Student(110);
+      // Person.behaviour('小明')
+
+      function creatObj(o) {
+        function F() {}
+        F.prototype = o;
+        return new F();
+      }
+
+      function inherit(subType, superType) {
+        subType.prototype = creatObj(superType.prototype);
+      }
+      function Person() {}
+      function stu() {
+        Person.call(this);
+      }
+
+      inherit(stu, Person);
+      console.log(stu.prototype);
+    </script>
+  </body>
+</html>

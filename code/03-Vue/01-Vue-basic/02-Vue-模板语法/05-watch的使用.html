@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div id="app">
+    <h2>{{message}} </h2>
+    <h2>{{info.name}} </h2>
+    <h2>{{info.age}} </h2>
+
+    <button @click="changeInfo">按钮</button>
+
+  </div>
+
+  <script src="../lib/Vue.js"></script>
+  <script>
+
+    const app = Vue.createApp({
+      data() {
+        return {
+          message: "hello world",
+          info: {
+            name: 'lwy',
+            age: 22
+          }
+        }
+      },
+      methods: {
+        changeInfo() {
+          this.info = { name: '李伟业', age: 18 }
+          this.message = 'hello Vue'
+        }
+      },
+      watch: {
+        info(newvalue, oldvalue) {
+          console.log("监听info的变化", newvalue, oldvalue)
+        },
+        message(newvalue, old) {
+          console.log('监听message的变化', newvalue, old)
+
+        }
+      }
+    })
+
+    app.mount("#app")
+
+
+  </script>
+
+</body>
+
+</html>

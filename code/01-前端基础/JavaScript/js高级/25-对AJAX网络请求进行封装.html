@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function wyajax({ url, method = "get", data = {} } = {}) {
+        const xhr = new XMLHttpRequest();
+
+        xhr.onload = function () {
+          const promise = new Promise((res, rej) => {
+            if (xhr.status <= 200 && xhr.status < 300) {
+              res(xhr.response);
+            } else {
+              rej(xhr.status, xhr.statusText);
+            }
+          });
+
+          return promise;
+        };
+
+        xhr.open(method, url);
+
+        xhr.send(data);
+      }
+
+      wyajax({});
+    </script>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script src="../lib/react.js"></script>
+    <script src="../lib/react-dom.js"></script>
+    <script src="../lib/babel.js"></script>
+
+    <script type="text/babel">
+      class App extends React.Component {
+        constructor() {
+          super();
+          this.state = {
+            counter: 0,
+          };
+        }
+
+        btn1Click(event) {
+          console.log(this, event);
+          this.setState({ counter: this.state.counter + 1 });
+        }
+
+        btn2Click = (event) => {
+          console.log(this, event);
+          this.setState({ counter: this.state.counter + 100 });
+        };
+
+        btn3Click(e, name, age) {
+          console.log(this, e, name, age);
+          this.setState({ counter: this.state.counter + 1000 });
+        }
+        render() {
+          return (
+            <div>
+              {/*this绑定方式一：bind绑定
+               默认 把btn1Click的引用地址赋值给 onClick,react内部帮我们进行默认调用，所以this会指向undefined
+              */}
+              <h3>{this.state.counter} </h3>
+              <button onClick={this.btn1Click.bind(this)}>+1</button>
+
+              {/*this绑定方式二：Es6 Class field
+                这里利用了箭头函数，箭头函数内部没有this, 所以在onClick内部进行调用时，不会在react找this,会向外层作用域也就是App找this
+                最有也就找到了当前组件
+              */}
+              <button onClick={this.btn2Click}>+100</button>
+
+              {/*this绑定方式三：事件监听时传入箭头函数(强烈推荐)
+                这里相当于把箭头函数赋值给 onClick， 内部对事件函数进行隐式调用，就不会出现方式一中赋值操作
+                所以当前this会指向当前组件，进行了隐式调用
+                注意：使用箭头函数要获取 event对象时，我们需要通过箭头函数把event传递给我们的事件函数
+                这是因为，react内部在进行onClick调用时，对event进行了包装，
+                我们是在函数内部又调用了一个函数，所以需要手动传递一下
+                方式一和方式二，则没有这个问题
+              */}
+              <button onClick={(e) => this.btn3Click(e, "lwy", 18)}>
+                +1000
+              </button>
+            </div>
+          );
+        }
+      }
+      const root = ReactDOM.createRoot(document.querySelector("#root"));
+
+      root.render(<App />);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .header {
+        width: 872px;
+        height: 100px;
+        margin: 0 auto;
+      }
+      .title {
+        display: flex;
+        height: 32px;
+        background-color: #ffe;
+      }
+      .subTitle {
+        height: 872px;
+        height: 65px;
+        /* background-color: orange; */
+      }
+      .subTitle > ul {
+        list-style-type: none;
+        display: flex;
+      }
+      .subTitle > ul > li {
+        height: 24px;
+        line-height: 24px;
+        padding: 0 13px 0 8px;
+        margin-right: 10px;
+        margin-top: 10px;
+        border: 1px solid #e5e5e5;
+        border-radius: 10px;
+      }
+      .subTitle > ul > .active {
+        background-color: orange;
+        color: white;
+      }
+      .header a {
+        width: 289px;
+        display: block;
+        text-align: center;
+      }
+
+      .header .split {
+        /* display: block;
+        height: 26px; */
+        height: 25px;
+        border-left: 1px solid #e5e5e5;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      .BrButtom {
+        border-bottom: 3px solid orange;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="title">
+        <a href="#" class="BrButtom">精品栏目</a>
+        <span class="split"></span>
+        <a href="#">赛事精品</a>
+        <span class="split"></span>
+        <a href="#">英雄攻略</a>
+      </div>
+      <div class="subTitle">
+        <ul>
+          <li class="active">峡谷大气层</li>
+          <li>峡谷大气层</li>
+          <li>峡谷大气层</li>
+          <li>峡谷大气层</li>
+          <li>峡谷大气层</li>
+          <li>峡谷大气层</li>
+          <li>峡谷大气层</li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      var title = document.querySelector(".title");
+      var subTitle = document.querySelector("ul");
+      console.log(title);
+
+      function Move(title, Class, index = 0) {
+        var IsFlag = title.children[0];
+        Class = Class + "";
+        title.onmouseover = function (event) {
+          if (IsFlag !== event.target) IsFlag.classList.remove(Class);
+          var Btel = event.target;
+          Btel.classList.add(Class);
+          IsFlag = Btel;
+        };
+      }
+      Move(title, "BrButtom");
+      Move(subTitle, "active");
+    </script>
+  </body>
+</html>

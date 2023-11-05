@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/table.css">
+
+</head>
+
+<body>
+
+  <div id="app">
+
+    <template v-if="books.length">
+      <table>
+        <tr>
+          <th></th>
+          <th>书籍名称</th>
+          <th>出版日期</th>
+          <th>价格</th>
+          <th>购买数量</th>
+          <th>操作</th>
+        </tr>
+        <tr v-for="(item, index) in books">
+          <td>{{item.id}} </td>
+          <td>{{item.name}} </td>
+          <td>{{item.date}} </td>
+          <td>{{item.price}} </td>
+          <td>
+
+            <button :disabled="item.count<=0" @click="increase(index)">-</button>
+            {{item.count}}
+            <button @click="decrease(index)">+</button>
+          </td>
+          <td>
+            <button @click="removebook(index)">移除</button>
+          </td>
+        </tr>
+      </table>
+      <h3>总价:{{totalPrice}} </h3>
+    </template>
+    <template v-else>
+      <h3>购物车为空~~~~~,请重新添加商品 </h3>
+    </template>
+
+  </div>
+
+  <script src="../lib/Vue.js"></script>
+  <script src="./js/data.js"></script>
+  <script>
+
+    const app = Vue.createApp({
+      data() {
+        return {
+          books
+        }
+      },
+
+      methods: {
+        decrease(index) {
+          this.books[index].count++
+        },
+        increase(index) {
+          this.books[index].count--
+        },
+        removebook(index) {
+          this.books.splice(index, 1)
+        }
+      },
+      computed: {
+        totalPrice() {
+          return this.books.reduce((prevalue, item) => {
+            return prevalue + item.price * item.count
+          }, 0)
+
+        }
+      }
+    })
+
+    app.mount("#app")
+
+
+  </script>
+
+</body>
+
+</html>

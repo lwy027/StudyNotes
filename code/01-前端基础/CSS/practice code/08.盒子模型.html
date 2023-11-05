@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: gray;
+        /* 一般建议使用padding设置因为padding是对内容进行操作 */
+        /* padding-left: 50px; */
+
+        /* 把盒子的边框margin、padding都包含在宽高里了 */
+        /* box-sizing: border-box; */
+        /* 把上下固定，左右给个auto浏览器会自动平均分配 */
+        margin: 0 auto;
+      }
+      .content {
+        width: 50px;
+        height: 50px;
+        background-color: rebeccapurple;
+        margin-top: 50px;
+        /* 这是给content设置matgin-top但是父盒子生效了，是因为margin是对兄弟元素之间生效 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <div class="content"></div>
+  </body>
+</html>

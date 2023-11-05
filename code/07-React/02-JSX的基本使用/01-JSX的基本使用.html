@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script src="../lib/react.js"></script>
+    <script src="../lib/react-dom.js"></script>
+    <script src="../lib/babel.js"></script>
+
+    <script type="text/babel">
+      class App extends React.Component {
+        constructor() {
+          super();
+          this.state = {
+            message: "Hello world",
+            movies: ["星球大战", "流浪地球", "穿越星际"],
+            age: 18,
+          };
+        }
+
+        render() {
+          const { message, movies, age } = this.state;
+          const isAdult = age >= 18 ? "已成年" : "未成年";
+          let isShow = true;
+          const className = isShow ? "bbb" : "";
+
+          const classList = ["abc", "cba"];
+          if (isShow) classList.push("bbb");
+          return (
+            <div>
+              {/*在JSX中写注释要使用{}语法包裹，并且是多行注释的写法 */}
+              <h2>{message}</h2>
+              {/*
+              情况一：当变量是Number、String、Array类型时，可以直接显示
+              情况二：当变量是null、undefined、Boolean类型时，内容为空；
+               情况三：Object对象类型不能作为子元素（not valid as a React child）
+              */}
+              <h2>{movies.join(" ")} </h2>
+
+              {/*嵌入表达式*/}
+              <h2> {isAdult} </h2>
+
+              {/*绑定属性
+                title/src/href普通的属性，使用{语法即可绑定}
+
+                class选择器要使用className,因为class在js中是关键字
+                动态绑定属性时，可以使用模板字符串动态绑定属性，还可以使用 逻辑判断语句，js写法进行绑定
+              */}
+
+              <h2 className={`abc cba ${className}`}>哈哈啊哈 </h2>
+              <h2 className={classList.join()}>哈哈啊哈 </h2>
+
+              {/*绑定内联样式style
+                要写成对象写法才会生效，并且不能使用小驼峰写法
+              */}
+              <h2 style={{ color: "red" }}>我是style</h2>
+            </div>
+          );
+        }
+      }
+
+      const root = ReactDOM.createRoot(document.querySelector("#root"));
+
+      root.render(<App />);
+    </script>
+  </body>
+</html>

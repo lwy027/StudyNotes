@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    const values = [100, 200, 300, 500, 600, 10000]
+
+    const currentValue = Math.round(Math.random() * 1000)
+
+    for (let i = 0; i < values.length; i++) {
+
+      let index = 0
+      if (currentValue < values[i]) {
+        index = i
+        values.splice(index, 1, currentValue)
+        console.log(index)
+        if (index === 0) {
+          values.unshift(currentValue)
+        }
+        break
+      }
+
+    }
+    console.log(values)
+
+
+
+
+  </script>
+</body>
+
+</html>

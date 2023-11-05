@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function requestData(url) {
+        return new Promise((res) => {
+          setTimeout(() => {
+            res(url);
+          }, 2000);
+        });
+      }
+      //promise方案
+      // requestData("lwy")
+      //   .then((res) => {
+      //     console.log(res);
+      //     return requestData(res + "aa");
+      //   })
+      //   .then((res) => {
+      //     console.log(res);
+      //     return requestData(res + "bbb");
+      //   })
+      //   .then((res) => {
+      //     console.log(res);
+      //   });
+
+      //genrator方案
+      //使用yield对每一次的请求进行传参
+      // generator.next().value.then((res1) => {
+      //   console.log(res1);
+      //   generator.next(res1).value.then((res2) => {
+      //     console.log(res2);
+      //     generator.next(res2).value.then((res3) => {
+      //       generator.next(res3);
+      //     });
+      //   });
+      // });
+
+      //使用 async await可以代替generator,
+      //实际上async和await内部就是由生成器和promise生成的
+      // async function getData() {
+      //   const res1 = await requestData("lwy");
+      //   console.log(res1);
+      //   const res2 = await requestData(res1 + "aa");
+      //   console.log(res2);
+      //   const res3 = await requestData(res2 + "bbb");
+      //   console.log(res3);
+      // }
+
+      // const generator = getData();
+
+      //封装generator执行函数
+      function execgenerator(genFn) {
+        //获取generator
+        const generator = genFn();
+        //定义一个递归函数
+        function exec(res) {
+          const result = generator.next(res);
+          if (result.done) return result.value;
+          result.value.then((res) => {
+            exec(res);
+          });
+        }
+        //执行递归函数
+        exec();
+      }
+      execgenerator(getData)
+    </script>
+  </body>
+</html>

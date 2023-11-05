@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .nav {
+        width: 604px;
+        height: 342px;
+        /* background-color: orange; */
+        margin: 0 auto;
+      }
+      .nav .lunBo {
+        display: block;
+      }
+      ul {
+        margin-top: -4px;
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+        background-color: black;
+        color: aliceblue;
+      }
+      li {
+        padding: 10px 0;
+        cursor: pointer;
+      }
+      .active {
+        background: rgba(255, 255, 255, 0.15);
+        color: #f3c258;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <div class="lunBo">
+        <img src="./img/1.jpeg" alt="" />
+      </div>
+      <div class="box">
+        <ul>
+          <li class="active" data-index="1">领五五皮肤</li>
+          <li data-index="2">刘关张语音爆料</li>
+          <li data-index="3">英雄盛会现场</li>
+          <li data-index="4">九尾狐新皮肤</li>
+          <li data-index="5">刘关张皮肤CG</li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      var Ul = document.querySelector("ul");
+
+      var isFlag = Ul.children[0];
+
+      // for (var i = 0; i < isFlag1.length; i++) {
+      //   console.log(i);
+      // }
+      var img = document.querySelector("img");
+      Ul.onmouseover = function (event) {
+        //获取事件发生元素
+        var Ulel = event.target;
+        //获取事件发生元素的data-index
+        var UlIndex = event.target.dataset.index;
+        //如果没有index则什么都不做
+        if (!UlIndex) return;
+        //把index的值赋值给imf的src实现动态切换
+        img.src = `./img/${UlIndex}.jpeg`;
+        //如果当前进入不是有active元素那么把以前的移除
+        if (isFlag !== Ulel) isFlag.classList.remove("active");
+        //在把类添加到上去
+        Ulel.classList.add("active");
+        //把当前值传递给isFlag
+        isFlag = Ulel;
+      };
+    </script>
+  </body>
+</html>

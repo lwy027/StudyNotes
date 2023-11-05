@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script src="../lib/react.js"></script>
+    <script src="../lib/react-dom.js"></script>
+    <script src="../lib/babel.js"></script>
+
+    <script type="text/babel">
+      class App extends React.Component {
+        constructor() {
+          super();
+          this.state = {
+            isShow: true,
+            friend: {
+              name: "lwy",
+              age: 20,
+            },
+          };
+        }
+
+        changeSHow() {
+          this.setState({ isShow: !this.state.isShow });
+        }
+        render() {
+          const { isShow, friend } = this.state;
+          let isELs = null;
+
+          if (isShow) {
+            isELs = <h2>准备开始战斗</h2>;
+          } else {
+            isELs = <h2>我还没有准备好</h2>;
+          }
+          return (
+            <div>
+              {/*方式一 ：条件判断语句*/}
+              <div>{isELs}</div>
+
+              {/*方式二：三元运算符*/}
+
+              <div>{isShow ? <div>我准备好了</div> : "我还没有准备好"}</div>
+
+              {/*方式三 ：逻辑与 &&与运算符
+               他会展示左右一个条件
+               如果前面不成立，则不会展示
+              */}
+              <h2>{isShow && friend && friend.name} </h2>
+              {/*方式四：模仿 v-show展示*/}
+              <h2 style={{ display: isShow ? "block" : "none" }}>模仿v-show</h2>
+
+              <button onClick={() => this.changeSHow()}>change</button>
+            </div>
+          );
+        }
+      }
+
+      const root = ReactDOM.createRoot(document.querySelector("#root"));
+
+      root.render(<App />);
+    </script>
+  </body>
+</html>

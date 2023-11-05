@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" />
+    <script>
+      // const xhr = new XMLHttpRequest();
+      // xhr.onreadystatechange = function () {
+      //   if (xhr.readyState !== XMLHttpRequest.DONE) return;
+      //   const xhrJson = JSON.parse(xhr.response);
+      //   console.log(xhrJson);
+      // };
+
+      // xhr.open("get", "http://123.207.32.32:8000/home/multidata");
+      // xhr.send();
+
+      function isobject(obj) {
+        return (
+          (obj !== null && typeof obj === "object") || typeof obj === "function"
+        );
+      }
+
+      function deepcopy(originValue) {
+        //4.symble类型
+        if (typeof originValue === "symbol") {
+          return Symbol(originValue.description);
+        }
+        //1.如果是基本数据类型之间返回
+        if (!isobject(originValue)) {
+          return originValue;
+        }
+        //2.判断是对象还是数组
+        const newobj = Array.isArray(originValue) ? [] : {};
+
+        if (isobject(originValue)) {
+          for (let key in originValue) {
+            newobj[key] = deepcopy(originValue[key]);
+          }
+        }
+        //3.函数之间返回
+        if (typeof originValue === "function") {
+          return originValue;
+        }
+         
+
+
+
+        return newobj;
+      }
+
+      const info = {
+        name: "lwy",
+        age: 18,
+        friends: {
+          name: "kobe",
+          age: 18,
+          adress: {
+            main: "美国",
+            detail: "洛杉矶",
+          },
+        },
+      };
+      Symbol.descri;
+      const infoDeeep = deepcopy(info);
+      console.log(infoDeeep);
+    </script>
+  </body>
+</html>

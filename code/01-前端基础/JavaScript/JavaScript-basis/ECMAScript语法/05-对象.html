@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // var obj = {
+      //   name: "蔡徐坤",
+      //   age: 18,
+      //   hobby: "唱跳rap",
+      // };
+      // var obj1 = new Object();
+      // console.log((obj1.name = "ass"));
+      // console.log(obj["hobby"]);
+      // function foo() {}
+      // var obj = new foo();
+      // console.log(obj);
+
+      // var objKey = Object.keys(obj);
+
+      // for (var i = 0; i < objKey.length; i++) {
+      //   var key = objKey[i];
+      //   var value = obj[key];
+      //   console.log(`Key值为:${key},value为:${value}`);
+      // }
+
+      // for (var key in obj) {
+      //   var key = key;
+      //   console.log(key);
+      //   var value = obj[key];
+      //   console.log(`Key值为:${key},value为:${value}`);
+      // }
+
+      // function foo(name, age) {
+      //   console.log(name, age);
+      //   console.log(this);
+      // }
+      // foo("李伟业", 18);
+
+      // var person = {
+      //   name: "李伟业",
+      //   SayHello: function () {
+      //     console.log(this);
+      //   },
+      // };
+
+      // person.SayHello();
+
+      //构造函数
+      // function Student(sex, name, age) {
+      //   this.sex = sex;
+      //   this.name = name;
+      //   this.age = age;
+      // }
+      // var stu = new Student("男", "kebi", 30);
+      // var stu1 = new Student("女", "小芳", 20);
+      // var stu2 = new Student("男", "小明", 18);
+      // console.log(stu);
+      // console.log(stu1);
+      // console.log(stu2);
+
+      // function Person(name) {
+      //   this.name = "lwy";
+      // }
+
+      // Person.prototype.easting = function () {
+      //   console.log(this.name + "正在吃东西");
+      // };
+
+      // function Student() {
+      //   this.son = 111;
+      // }
+      // Student.prototype = new Person();
+      // Student.prototype.stdying = function () {
+      //   console.log(this.son + "正在学习");
+      // };
+
+      // var stu = new Student();
+
+      // stu.easting("aaa");
+      // stu.stdying();
+      // console.log(stu.prototype);
+
+      //class
+      class Person {
+        constructor(name, age) {
+          this.name = name;
+          this.age = age;
+        }
+        eting() {
+          console.log(this.name + "正在吃东西");
+        }
+        static staticMethods() {
+          console.log("我是静态方法");
+        }
+      }
+
+      class Student extends Person {
+        constructor(name, age, sex) {
+          super(name, age);
+          this.sex = sex;
+        }
+        Studying() {
+          console.log(this.name + "正在学习");
+        }
+        static staticMethods() {
+          super.staticMethods();
+        }
+      }
+      var stu = new Student("小明", 18, "男");
+      stu.eting();
+      stu.Studying();
+      stu.staticMethods();
+      console.log(stu);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //  1 1 2 3 5 8 13 21
+      //  1 2 3 4 5 6 7   8
+      // function feibonaq(n) {
+      //   if (n === 1 || n === 2) return 1;
+      //   return feibonaq(n - 1) + feibonaq(n - 2);
+      // }
+      // console.log(feibonaq(10));
+
+      // function feibinaq(n) {
+      //   if (n === 1 || n === 2) return 1;
+      //   var n1 = 1;
+      //   var n2 = 1;
+      //   var result = 0;
+      //   for (var i = 3; i <= n; i++) {
+      //     result = n1 + n2;
+      //     n1 = n2;
+      //     n2 = result;
+      //   }
+      //   return result;
+      // }
+      // console.log(feibinaq(10));
+      (function (i) {
+        var n = i;
+        console.log("立即执行里面的i", n);
+      })(10);
+    </script>
+  </body>
+</html>

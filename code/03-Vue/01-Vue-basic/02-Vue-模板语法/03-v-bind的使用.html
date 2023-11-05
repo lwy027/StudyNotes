@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .active {
+      background-color: red;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="app">
+    <h2>{{message}} </h2>
+    <!-- <button :class="{active:isactive }" @click="changeA">按钮 </button> -->
+    <!-- <button :class="[isactive? 'active':'' ] " @click="changeA">按钮 </button> -->
+
+    <button :style="{color:'red', fontsize:'30px'}">按钮</button>
+  </div>
+
+  <script src="../lib/Vue.js"></script>
+  <script>
+
+    const app = Vue.createApp({
+      data() {
+        return {
+          message: "hello world",
+          isactive: true
+        }
+      },
+      methods: {
+        changeA() {
+          this.isactive = !this.isactive
+        }
+      }
+    })
+
+    app.mount("#app")
+
+
+
+  </script>
+
+</body>
+
+</html>

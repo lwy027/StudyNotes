@@ -1,0 +1,66 @@
+<!--
+ * @Author: liweiye 2759536538@qq.com
+ * @Date: 2023-08-14 19:34:29
+ * @LastEditors: liweiye 2759536538@qq.com
+ * @LastEditTime: 2023-08-15 10:15:16
+ * @FilePath: \07-React\01-react初体验\02-react-组件化.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script src="../lib/react.js"></script>
+    <script src="../lib/react-dom.js"></script>
+    <script src="../lib/babel.js"></script>
+
+    <script type="text/babel">
+      //使用类实现组件化
+      class App extends React.Component {
+        //定义数据
+        constructor() {
+          //调用super关键字，使用父类属性
+          super();
+          this.state = {
+            message: "Hello World",
+          };
+          //也可以提前在constructor中显示绑定this,这样不需要每一次都显示绑定
+          this.btnClick = this.btnClick.bind(this);
+        }
+        //定义方法(实例方法)
+        btnClick() {
+          //这里直接使用this,会拿到undefined，因为这里函数相当与被默认调用了
+          //click = this.btnClick
+          // click() 在类中和babel会自动开启严格默认，所以默认调用this会指向undefined
+          //我们需要使用显示绑定，这样就可以获取正确的this,
+          //this.btnClick.bind(this),这里this,指向render函数的this,而他的this是app组件，所以可以正确获取
+          // console.log("----", this);
+          //更改state时，需要调用 一个内部函数setState，内部吧帮我们完成2件事 1.将state中的message修改掉，2.自动重新执行render函数
+          this.setState({
+            message: "Hello React",
+          });
+        }
+
+        //渲染内容render方法
+        render() {
+          return (
+            <div>
+              <h2>{this.state.message}</h2>
+              <button onClick={this.btnClick.bind(this)}>更改内容</button>
+            </div>
+          );
+        }
+      }
+
+      const root = ReactDOM.createRoot(document.querySelector("#root"));
+      //可以放元素，同样也可以放组件
+      root.render(<App />);
+    </script>
+  </body>
+</html>

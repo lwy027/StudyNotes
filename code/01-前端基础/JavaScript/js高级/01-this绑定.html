@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //1.默认绑定
+      // function foo() {
+      //   console.log(this); //window
+      // }
+      // foo();
+
+      //2.隐式绑定
+      // var obj = {
+      //   name: "liwe",
+      //   sayName: function () {
+      //     console.log("隐式绑定", this);
+      //   },
+      // };
+      // obj.sayName();
+
+      //3.显示绑定 apply/call
+
+      // function foo(name, age) {
+      //   console.log("显示绑定", this, name, age);
+      // }
+
+      // foo.apply("aa", ["azz", 20]);
+      // foo.call("aa", "sxx", 50);
+
+      //4.new的绑定
+
+      //bind的绑定
+      // function foo() {
+      //   console.log("bind绑定", this);
+      // }
+      // obj = {
+      //   name: "xza",
+      //   sayName: foo,
+      // };
+
+      // foo.bind(obj)();
+
+      /* 优先级
+      1.new
+      2.bind
+      3.apply/call
+      4.隐式绑定
+      5.默认
+      */
+      // function foo(name) {
+      //   this.name = name;
+      //   console.log("默认", this);
+      // }
+
+      // foo.apply("aa", ["zaa"]);
+      // var aa = new foo("aa");
+
+      //箭头函数
+
+      // var obj = {
+      //   name: "azkoa",
+      //   sayName: () => {
+      //     var arr = () => {
+      //       console.log(this);
+      //     };
+      //     arr();
+      //   },
+      // };
+      // obj.sayName();
+
+
+
+      
+    </script>
+  </body>
+</html>

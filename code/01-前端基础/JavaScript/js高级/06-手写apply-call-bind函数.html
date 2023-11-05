@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function foo(name, age) {
+        console.log(this, name, age);
+      }
+      //对公共代码封装
+      Function.prototype.exec = function (thisArs, ...args) {
+        thisArs =
+          thisArs === null || thisArs === undefined ? window : Object(thisArs);
+        ///第一个参数为指定this,我们利用隐式绑定给thisArs添加一个属性fn为调用时的函数
+        //fn的this会指向thisArs
+        thisArs.fn = this;
+        Object.defineProperty(thisArs, "fn", {
+          configurable: true,
+          enumerable: false,
+          writable: false,
+          value: this,
+        });
+
+        thisArs.fn(...args);
+        delete thisArs.fn;
+      };
+      //实现apply
+      Function.prototype.wyapply = function (thisArs, ...args) {
+        this.exec(thisArs, ...args);
+      };
+      //实现call
+      foo.wyapply("aa", ["zaa", 50]);
+
+      Function.prototype.wycall = function (thisArs, ...args) {
+        this.exec(thisArs, ...args);
+      };
+
+      foo.wycall("12121", "小欧康", 20);
+    </script>
+  </body>
+</html>

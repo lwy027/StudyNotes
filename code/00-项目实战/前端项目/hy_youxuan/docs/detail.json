@@ -1,0 +1,401 @@
+{
+    "_id": 37940211,
+    "code": 200,
+    "data": {
+        "shop": {
+            "saleTrickWeight": 0.77,
+            "updateTime": "2022-02-17 11:10:46",
+            "sellerCreditWeight": 1.29,
+            "goldSeller": 0,
+            "operateAbilityWeight": 1.99,
+            "creditScore": 13,
+            "modified": null,
+            "saleNum": null,
+            "goodRatePercentage": 100,
+            "sas": 0,
+            "serviceScore": "4.6",
+            "id": 3721440,
+            "jumpUrl": "https://shop562514486.taobao.com",
+            "deliveryScore": "4.7",
+            "isDelete": 0,
+            "rankNum": 999,
+            "title": "鑫得源数码专营店",
+            "deliveryScoreLevel": -1,
+            "dsr": 46776,
+            "taobaoCid": 0,
+            "isWhite": 0,
+            "platform": 2,
+            "allItemCount": 10,
+            "fansNum": 2041,
+            "sellerId": 2204164889237,
+            "desc": null,
+            "platformName": "天猫",
+            "categoryId": null,
+            "mas": 0,
+            "cg": null,
+            "coverUrl": "http://logo.taobao.com/shop-logo/d4/19/TB1GYLYbhn1gK0jSZKPSutvUXXa.jpg",
+            "serviceScoreLevel": -1,
+            "picUrl": "http://logo.taobao.com/shop-logo/d4/19/TB1GYLYbhn1gK0jSZKPSutvUXXa.jpg",
+            "enterpriseShop": 0,
+            "nickname": "鑫得源数码专营店",
+            "createTime": "2019-08-08 22:56:52",
+            "itemScoreLevel": -1,
+            "isFeaturedShop": false,
+            "mg": null,
+            "created": "2019-07-11 17:06:24",
+            "cas": 0,
+            "pid": "mm_105894251_8788827_60646756",
+            "level": 3,
+            "shopId": 562514486,
+            "hasMoreItems": true,
+            "promotionNum": 3,
+            "picPath": "/d4/19/TB1GYLYbhn1gK0jSZKPSutvUXXa.jpg",
+            "shopLogo": "img.alicdn.com/imgextra/i3/TB1GYLYbhn1gK0jSZKPSutvUXXa.jpg",
+            "itemScore": "4.6",
+            "shopScoreText": "商品4.6 物流4.7 售后4.6 | 好评率100%",
+            "sg": null,
+            "bulletin": null
+        },
+        "can_admin": false,
+        "share": {
+            "url": "http://xiongmaoyouxuan.com/?r=share#/item/37940211?",
+            "text": "",
+            "imageUrl": "https://img.alicdn.com/bao/uploaded/i2/2204164889237/O1CN01UnNMSn2I6b4lpVhjU_!!0-item_pic.jpg",
+            "title": "真无线蓝牙耳机双耳适用于vivo华为oppo小米苹果安卓通用型"
+        },
+        "detail": {
+            "shop": {
+                "saleTrickWeight": 0.77,
+                "updateTime": "2022-02-17 11:10:46",
+                "sellerCreditWeight": 1.29,
+                "goldSeller": 0,
+                "operateAbilityWeight": 1.99,
+                "creditScore": 13,
+                "modified": null,
+                "saleNum": null,
+                "goodRatePercentage": 100,
+                "sas": 0,
+                "serviceScore": "4.6",
+                "id": 3721440,
+                "jumpUrl": "https://shop562514486.taobao.com",
+                "deliveryScore": "4.7",
+                "isDelete": 0,
+                "rankNum": 999,
+                "title": "鑫得源数码专营店",
+                "deliveryScoreLevel": -1,
+                "dsr": 46776,
+                "taobaoCid": 0,
+                "isWhite": 0,
+                "platform": 2,
+                "allItemCount": 10,
+                "fansNum": 2041,
+                "sellerId": 2204164889237,
+                "desc": null,
+                "platformName": "天猫",
+                "categoryId": null,
+                "mas": 0,
+                "cg": null,
+                "coverUrl": "http://logo.taobao.com/shop-logo/d4/19/TB1GYLYbhn1gK0jSZKPSutvUXXa.jpg",
+                "serviceScoreLevel": -1,
+                "picUrl": "http://logo.taobao.com/shop-logo/d4/19/TB1GYLYbhn1gK0jSZKPSutvUXXa.jpg",
+                "enterpriseShop": 0,
+                "nickname": "鑫得源数码专营店",
+                "createTime": "2019-08-08 22:56:52",
+                "itemScoreLevel": -1,
+                "isFeaturedShop": false,
+                "mg": null,
+                "created": "2019-07-11 17:06:24",
+                "cas": 0,
+                "pid": "mm_105894251_8788827_60646756",
+                "level": 3,
+                "shopId": 562514486,
+                "hasMoreItems": true,
+                "promotionNum": 3,
+                "picPath": "/d4/19/TB1GYLYbhn1gK0jSZKPSutvUXXa.jpg",
+                "shopLogo": "img.alicdn.com/imgextra/i3/TB1GYLYbhn1gK0jSZKPSutvUXXa.jpg",
+                "itemScore": "4.6",
+                "shopScoreText": "商品4.6 物流4.7 售后4.6 | 好评率100%",
+                "sg": null,
+                "bulletin": null
+            },
+            "smallIconUrl": "",
+            "detailHintMsg": "",
+            "tbPassword": "7￥38Jg24j03Ue￥/",
+            "itemType": 0,
+            "canPurchase": false,
+            "photo": [
+                {
+                    "itemId": 44202896,
+                    "seq": 0,
+                    "url": "https://img.alicdn.com/bao/uploaded/i2/2204164889237/O1CN01UnNMSn2I6b4lpVhjU_!!0-item_pic.jpg_600x600q90.jpg",
+                    "height": 800,
+                    "width": 800,
+                    "id": 428366593
+                },
+                {
+                    "itemId": 44202896,
+                    "seq": 1,
+                    "url": "https://img.alicdn.com/i1/2204164889237/O1CN01oGFwmz2I6b3hFjrUp_!!2204164889237.png_600x600q90.jpg",
+                    "height": 800,
+                    "width": 800,
+                    "id": 402936769
+                },
+                {
+                    "itemId": 44202896,
+                    "seq": 2,
+                    "url": "https://img.alicdn.com/i3/2204164889237/O1CN01ryYtrb2I6b3Kx2ug4_!!0-item_pic.jpg_600x600q90.jpg",
+                    "height": 800,
+                    "width": 800,
+                    "id": 428366594
+                },
+                {
+                    "itemId": 44202896,
+                    "seq": 3,
+                    "url": "https://img.alicdn.com/i3/2204164889237/O1CN01kXR8Mn2I6b30OFrna_!!2204164889237.jpg_600x600q90.jpg",
+                    "height": 800,
+                    "width": 800,
+                    "id": 379293329
+                },
+                {
+                    "itemId": 44202896,
+                    "seq": 4,
+                    "url": "https://img.alicdn.com/i2/2204164889237/O1CN01qEhOAY2I6b34E7Mom_!!2204164889237.jpg_600x600q90.jpg",
+                    "height": 800,
+                    "width": 800,
+                    "id": 379293330
+                }
+            ],
+            "image": "https://img.alicdn.com/bao/uploaded/i2/2204164889237/O1CN01UnNMSn2I6b4lpVhjU_!!0-item_pic.jpg",
+            "purchaseConfig": {
+                "couponErrorMsg": "",
+                "mode": 1,
+                "errorPageUrl": "http://quan.lukou.com/gotoAliBackup.html"
+            },
+            "detailUrl": "youxuan://commodity?id=37940211",
+            "itemFlag": 0,
+            "saleNum": 500,
+            "platform": 2,
+            "keywords": [
+                "大额券"
+            ],
+            "descContentList": [
+                {
+                    "photo": {
+                        "itemId": 44202896,
+                        "seq": 0,
+                        "url": "https://img.alicdn.com/bao/uploaded/i2/2204164889237/O1CN01UnNMSn2I6b4lpVhjU_!!0-item_pic.jpg_600x600q90.jpg",
+                        "height": 800,
+                        "width": 800,
+                        "id": 428366593
+                    },
+                    "image": {
+                        "itemId": 44202896,
+                        "seq": 0,
+                        "url": "https://img.alicdn.com/bao/uploaded/i2/2204164889237/O1CN01UnNMSn2I6b4lpVhjU_!!0-item_pic.jpg_600x600q90.jpg",
+                        "height": 800,
+                        "width": 800,
+                        "id": 428366593
+                    },
+                    "type": 1
+                },
+                {
+                    "photo": {
+                        "itemId": 44202896,
+                        "seq": 1,
+                        "url": "https://img.alicdn.com/i1/2204164889237/O1CN01oGFwmz2I6b3hFjrUp_!!2204164889237.png_600x600q90.jpg",
+                        "height": 800,
+                        "width": 800,
+                        "id": 402936769
+                    },
+                    "image": {
+                        "itemId": 44202896,
+                        "seq": 1,
+                        "url": "https://img.alicdn.com/i1/2204164889237/O1CN01oGFwmz2I6b3hFjrUp_!!2204164889237.png_600x600q90.jpg",
+                        "height": 800,
+                        "width": 800,
+                        "id": 402936769
+                    },
+                    "type": 1
+                },
+                {
+                    "photo": {
+                        "itemId": 44202896,
+                        "seq": 2,
+                        "url": "https://img.alicdn.com/i3/2204164889237/O1CN01ryYtrb2I6b3Kx2ug4_!!0-item_pic.jpg_600x600q90.jpg",
+                        "height": 800,
+                        "width": 800,
+                        "id": 428366594
+                    },
+                    "image": {
+                        "itemId": 44202896,
+                        "seq": 2,
+                        "url": "https://img.alicdn.com/i3/2204164889237/O1CN01ryYtrb2I6b3Kx2ug4_!!0-item_pic.jpg_600x600q90.jpg",
+                        "height": 800,
+                        "width": 800,
+                        "id": 428366594
+                    },
+                    "type": 1
+                },
+                {
+                    "photo": {
+                        "itemId": 44202896,
+                        "seq": 3,
+                        "url": "https://img.alicdn.com/i3/2204164889237/O1CN01kXR8Mn2I6b30OFrna_!!2204164889237.jpg_600x600q90.jpg",
+                        "height": 800,
+                        "width": 800,
+                        "id": 379293329
+                    },
+                    "image": {
+                        "itemId": 44202896,
+                        "seq": 3,
+                        "url": "https://img.alicdn.com/i3/2204164889237/O1CN01kXR8Mn2I6b30OFrna_!!2204164889237.jpg_600x600q90.jpg",
+                        "height": 800,
+                        "width": 800,
+                        "id": 379293329
+                    },
+                    "type": 1
+                },
+                {
+                    "photo": {
+                        "itemId": 44202896,
+                        "seq": 4,
+                        "url": "https://img.alicdn.com/i2/2204164889237/O1CN01qEhOAY2I6b34E7Mom_!!2204164889237.jpg_600x600q90.jpg",
+                        "height": 800,
+                        "width": 800,
+                        "id": 379293330
+                    },
+                    "image": {
+                        "itemId": 44202896,
+                        "seq": 4,
+                        "url": "https://img.alicdn.com/i2/2204164889237/O1CN01qEhOAY2I6b34E7Mom_!!2204164889237.jpg_600x600q90.jpg",
+                        "height": 800,
+                        "width": 800,
+                        "id": 379293330
+                    },
+                    "type": 1
+                }
+            ],
+            "originPrice": 219.8,
+            "tbItemUrl": "https://uland.taobao.com/coupon/edetail?e=0hgqAwnGHoalhHvvyUNXZfh8CuWt5YH5OVuOuRD5gLJMmdsrkidbOcgNAa9X6T79uG1ZaNECU%2FS7pVXmA6bTuP9L%2BhhOpd0JXRuv7xpz1L7QEUCpE4O7XfucdFaiNTi9VUntieNRT3FNK9C8LRcx1aKhuzUAwjV%2Bp0yoVUp4stuDP1EkgpvlzEGN1lCLK6P4%2Be3RkCffS9x3DDPZISAsQpkvMW1vDTHQRG%2BankrZeqlPXqRrvXmNcJKTtViQoP0XO2J1caqUa%2Bt%2BOHfs5nLQGA%3D%3D&traceId=0b0cc5e516455283398765343ec089&&union_lens=lensId:TAPI@1645528339@212c86cc_085d_17f2121d5b5_8a7b@01&nowake=1",
+            "commodityDetailUrl": "http://detail.tmall.com/item.htm?s=&id=613893286069",
+            "id": 37940211,
+            "tbOriginPrice": 219.8,
+            "couponId": 821897923,
+            "couponStatus": "有券",
+            "lowestPriceDays": 0,
+            "title": "真无线蓝牙耳机双耳适用于vivo华为oppo小米苹果安卓通用型",
+            "introduction": "",
+            "couponApiUrl": "http://quan.lukou.com/api/commodity/mock_taobao_api",
+            "taobaoCid": 50005050,
+            "fetchTbItemUrl": "https://uland.taobao.com/coupon/edetail?e=0hgqAwnGHoalhHvvyUNXZfh8CuWt5YH5OVuOuRD5gLJMmdsrkidbOcgNAa9X6T79uG1ZaNECU%2FS7pVXmA6bTuP9L%2BhhOpd0JXRuv7xpz1L7QEUCpE4O7XfucdFaiNTi9VUntieNRT3FNK9C8LRcx1aKhuzUAwjV%2Bp0yoVUp4stuDP1EkgpvlzEGN1lCLK6P4%2Be3RkCffS9x3DDPZISAsQpkvMW1vDTHQRG%2BankrZeqlPXqRrvXmNcJKTtViQoP0XO2J1caqUa%2Bt%2BOHfs5nLQGA%3D%3D&traceId=0b0cc5e516455283398765343ec089&&union_lens=lensId:TAPI@1645528339@212c86cc_085d_17f2121d5b5_8a7b@01&nowake=1",
+            "priceTag": 0,
+            "favoritedCount": 15,
+            "largeCoupon": true,
+            "dataoke": {},
+            "coupon": {
+                "expireMsg": "17天后过期",
+                "couponId": "",
+                "price": 200,
+                "couponText": "满201减200",
+                "link": "",
+                "id": 821897923,
+                "condition": "201",
+                "surplus": 99877,
+                "expireDate": "2022-03-23",
+                "shortLink": "",
+                "receive": 123,
+                "hint": "超大额神券!",
+                "day": 17
+            },
+            "helpUrl": "http://quan.lukou.com/activity/help.html",
+            "type": 1,
+            "couponValue": "200元券",
+            "expiring": false,
+            "expireMsg": "17天后过期",
+            "tbItemReview": {
+                "userName": "t**0",
+                "reviewCount": 5523,
+                "tags": [
+                    {
+                        "tagCount": 467,
+                        "tagName": "音质上乘"
+                    },
+                    {
+                        "tagCount": 253,
+                        "tagName": "性价比很高"
+                    },
+                    {
+                        "tagCount": 212,
+                        "tagName": "颜值很高"
+                    }
+                ],
+                "reviewDetailUrl": "https://h5.m.taobao.com/app/rate/www/rate-list/index.html?auctionNumId=613893286069",
+                "reviewContent": "续航能力：待机时间长。 佩戴感受：比较舒服。 外观材质：做工精细。 声音效果：音效一流。 ",
+                "avator": "http://img1.lukou.com/static/p/commodity/img/20190719-152711.jpeg"
+            },
+            "price": 19.8,
+            "commissionType": 0,
+            "accessoryHints": [
+                "全场包邮",
+                "7天退换",
+                "品质保证"
+            ],
+            "commodityId": "613893286069",
+            "planLink": "",
+            "isTianmao": true,
+            "hasValidCoupon": true,
+            "isFreePostage": true,
+            "sellerId": "2204164889237",
+            "itemId": 44202896,
+            "expireDate": "2022-03-23",
+            "combineLink": "http://coupon.lukou.com/gocmd/37940211",
+            "cid": 0,
+            "url": "https://uland.taobao.com/coupon/edetail?e=0hgqAwnGHoalhHvvyUNXZfh8CuWt5YH5OVuOuRD5gLJMmdsrkidbOcgNAa9X6T79uG1ZaNECU%2FS7pVXmA6bTuP9L%2BhhOpd0JXRuv7xpz1L7QEUCpE4O7XfucdFaiNTi9VUntieNRT3FNK9C8LRcx1aKhuzUAwjV%2Bp0yoVUp4stuDP1EkgpvlzEGN1lCLK6P4%2Be3RkCffS9x3DDPZISAsQpkvMW1vDTHQRG%2BankrZeqlPXqRrvXmNcJKTtViQoP0XO2J1caqUa%2Bt%2BOHfs5nLQGA%3D%3D&traceId=0b0cc5e516455283398765343ec089&&union_lens=lensId:TAPI@1645528339@212c86cc_085d_17f2121d5b5_8a7b@01&nowake=1",
+            "activeTagIndex": "",
+            "commodityHint": null,
+            "isFavorited": false,
+            "showExpireMsg": false,
+            "commission": 50,
+            "qunTitle": "",
+            "thumbnail": "https://img.alicdn.com/bao/uploaded/i2/2204164889237/O1CN01UnNMSn2I6b4lpVhjU_!!0-item_pic.jpg",
+            "commodityTypeName": "公用",
+            "rankingTag": "",
+            "ratingType": "",
+            "isExpired": false,
+            "recComment": "",
+            "hasCoupon": true
+        },
+        "carouselList": [
+            {
+                "nickName": "181****3733",
+                "avatar": "",
+                "desc": "领券购买了这个商品：9秒前"
+            },
+            {
+                "nickName": "131****7874",
+                "avatar": "",
+                "desc": "领券购买了这个商品：20秒前"
+            },
+            {
+                "nickName": "158****1628",
+                "avatar": "",
+                "desc": "领券购买了这个商品：23秒前"
+            },
+            {
+                "nickName": "131****4756",
+                "avatar": "",
+                "desc": "收藏了这个商品：37秒前"
+            },
+            {
+                "nickName": "170****0801",
+                "avatar": "",
+                "desc": "领券购买了这个商品：48秒前"
+            },
+            {
+                "nickName": "183****3723",
+                "avatar": "",
+                "desc": "收藏了这个商品：59秒前"
+            }
+        ]
+    }
+}

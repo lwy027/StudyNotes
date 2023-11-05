@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div id="app">
+    <h2>{{message}} </h2>
+    <h2>{{info.name}} </h2>
+    <h2>{{info.age}} </h2>
+
+    <button @click="changeInfo">按钮</button>
+
+  </div>
+
+  <script src="../lib/Vue.js"></script>
+  <script>
+
+    const app = Vue.createApp({
+      data() {
+        return {
+          message: "hello world",
+          info: {
+            name: 'lwy',
+            age: 22
+          }
+        }
+      },
+      methods: {
+        changeInfo() {
+          this.info.name = "李伟业"
+          this.info.age = 18
+        }
+      },
+      watch: {
+        //写成对象形式，开启深度监听和立即执行
+        info: {
+          handler(newvalue, oldvalue) {
+            console.log("监听info的变化", newvalue, oldvalue)
+          },
+          deep: true,
+          immediate: true
+        },
+        "info.name"() {
+          console.log('第二种写法字符串形式')
+        }
+      },
+
+    })
+
+    app.mount("#app")
+
+
+  </script>
+
+</body>
+
+</html>

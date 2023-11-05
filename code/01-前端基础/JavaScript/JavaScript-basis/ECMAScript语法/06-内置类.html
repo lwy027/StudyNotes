@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Number属性
+      // console.log(Number.MAX_SAFE_INTEGER);
+      // console.log(Number.MIN_SAFE_INTEGER);
+
+      //Number实例方法
+      // var Num = 144.44412585;
+      // console.log(Num.toString());
+      // console.log(typeof Num);
+
+      // console.log(Num.toFixed(2));
+
+      // Number
+      // var str = "44444.4";
+      // console.log(Number.parseFloat(str));
+      // console.log(Number.parseInt(str));
+
+      // ;console.log(Math.floor(Math.random() * 100));
+      // var num = 15.55444;
+      // console.log(Math.pow(2,2))
+
+      //String
+
+      // var str = "He-llo-World";
+
+      // console.log(str.split('-'));
+
+      // for (var key of str) {
+      //   console.log(key);
+      // }
+
+      // var arr = [5, 6, 1, 2, 6, 0];
+      // arr.splice(1, 0,454);
+      // console.log(arr)
+      // arr.filter(function (item) {
+      //   return item !== 1;
+      // });
+      // console.log(arr);
+
+      // for (var i = 0; i < arr.length; i++) {
+      //   console.log(arr[i]);
+      // }
+      // for (var key in arr) {
+      //   console.log(key)
+      //   console.log(arr[key])
+      // }
+      // for (var ket of arr) {
+      //   console.log(ket)
+      // }
+
+      var students = [
+        { id: 100, name: "小军" },
+        { id: 101, name: "小红" },
+        { id: 102, name: "小明" },
+      ];
+
+      var p = students.forEach((item) => {
+        return (item.id += 100);
+      });
+      console.log(p);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //定义promise的状态
+      const PROMISE_STATUS_PEADING = "pending";
+      const PROMISE_STATUS_FULFILLED = "fulfilled";
+      const PROMISE_STATUS_REJECTED = "rejected";
+
+      class wypromise {
+        constructor(exector) {
+          this.status = PROMISE_STATUS_PEADING;
+          this.value = undefined;
+          this.value1 = undefined;
+          const resolve = (value) => {
+            if (this.status === PROMISE_STATUS_PEADING) {
+              this.status = PROMISE_STATUS_FULFILLED;
+              this.value = value;
+            }
+          };
+
+          const reject = (value) => {
+            if (this.status === PROMISE_STATUS_PEADING) {
+              this.status = PROMISE_STATUS_REJECTED;
+              this.value1 = value;
+            }
+          };
+
+          exector(resolve, reject);
+        }
+      }
+    </script>
+  </body>
+</html>

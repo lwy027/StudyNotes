@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      table {
+        margin: 100px auto;
+        border: 1px solid red;
+        border-collapse: collapse;
+      }
+      tr td {
+        border: 1px solid red;
+        padding: 10px;
+        text-align: center;
+      }
+      th {
+        border: 1px solid red;
+        text-align: center;
+        padding: 10px;
+        color: #eef6f9;
+        background-color: rgb(106, 103, 103);
+      }
+      .counter > button {
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script src="../lib/react.js"></script>
+    <script src="../lib/react-dom.js"></script>
+    <script src="../lib/babel.js"></script>
+
+    <script type="text/babel">
+      class App extends React.Component {
+        constructor() {
+          super();
+          this.state = {
+            books: [
+              {
+                name: "<<算法导论>>",
+                date: "2006 - 9",
+                price: 85.0,
+                counter: 1,
+              },
+              {
+                name: "<<UNIX编程艺术>>",
+                date: "2006 - 2",
+                price: 59.0,
+                counter: 1,
+              },
+              {
+                name: "<<编程珠玑>>",
+                date: "2008 - 10",
+                price: 39.0,
+                counter: 1,
+              },
+              {
+                name: "<<代码大全>>",
+                date: "2006 - 3",
+                price: 128.0,
+                counter: 1,
+              },
+            ],
+          };
+        }
+
+        removeBook(index) {
+          console.log(index);
+          this.setState({
+            books: this.state.books.filter((item, i) => {
+              return i !== index;
+            }),
+          });
+        }
+        increment(index) {
+          //这种直接操作源对象的写法，在purComponent组件中，不会进行页面的刷新
+          //因为它内部是进行了浅层的比较，他会觉得 newState和oldState是一个对象，所以不会进行render的调用
+          this.state.newBooks[index].counter++;
+          this.setState({ books: this.state.newBooks });
+
+          //在react中不推荐直接对源数据进行操作，所以我们对元数据进行浅拷贝
+          //对源数据进行了浅拷贝在赋值，是为了内部在进行newState和oldState比较时
+          //告诉它我们不是一个对象，让他帮我们执行render函数的调用，进行页面的刷新
+
+          const newBooks = [...this.state.books];
+          newBooks[index].counter += 1;
+          //重新调用this.setState进行赋值操作
+          this.setState({ books: newBooks });
+        }
+        decrement(index) {
+          const newBooks = [...this.state.books];
+          newBooks[index].counter -= 1;
+          //重新调用this.setState进行赋值
+          this.setState({ books: newBooks });
+        }
+        render() {
+          const { books } = this.state;
+          let showMessage = null;
+          if (books.length) {
+            showMessage = (
+              <table>
+                <tr>
+                  <th></th>
+                  <th>书籍名称</th>
+                  <th>出版日期</th>
+                  <th>价格</th>
+                  <th>购买数量</th>
+                  <th>操作</th>
+                </tr>
+                {books.map((item, index) => {
+                  return (
+                    <tr key={index}>
+                      <td>{index} </td>
+                      <td> {item.name} </td>
+                      <td> {item.date} </td>
+                      <td> ￥{item.price} </td>
+                      <td className="counter">
+                        <button
+                          disabled={item.counter <= 1 ? true : false}
+                          onClick={() => this.decrement(index)}
+                        >
+                          -
+                        </button>
+                        {item.counter}
+                        <button onClick={() => this.increment(index)}>+</button>
+                      </td>
+                      <td>
+                        <button onClick={() => this.removeBook(index)}>
+                          移除
+                        </button>{" "}
+                      </td>
+                    </tr>
+                  );
+                })}
+              </table>
+            );
+          } else {
+            showMessage = <h2>没有商品数据</h2>;
+          }
+          return (
+            <div>
+              {showMessage}
+              <h2>
+                总价格：
+                {"￥" +
+                  books.reduce((pre, cur) => {
+                    return pre + cur.price * cur.counter;
+                  }, 0)}
+              </h2>
+            </div>
+          );
+        }
+      }
+
+      const root = ReactDOM.createRoot(document.querySelector("#root"));
+
+      root.render(<App />);
+    </script>
+  </body>
+</html>

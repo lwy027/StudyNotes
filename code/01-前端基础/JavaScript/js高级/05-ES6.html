@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // var names = ["xzjiaix", "xsxs", "xsxs", "xssx"];
+      // // console.log(a, b, c);
+      // var obj = {
+      //   anme: "小明",
+      //   age: 30,
+      // };
+      // // var arr = [...a, ...b, ...c];
+      // // console.log(arr);
+      // var [name1, name2, ...name3] = names;
+      // console.log(name1, name2, name3);
+
+      // var {anme, age } = obj;
+      // console.log(anme,age)
+      // function foo(m, n) {
+      //   console.log(m, n);
+      // }
+      // const name = "lwy";
+      // const age = 20;
+      // foo`Hello ${name} world ${age}`;
+
+      // function foo({ name, age } = { name: "小明", age: 20 }) {
+      //   console.log(name, age);
+      // }
+      // foo()
+
+      // const obj = {
+      //   name: "小明",
+      //   age: 20,
+      // };
+      // console.log(Object.values(obj));
+      // var s1 = Symbol("abs");
+      // var s2 = Symbol("lll");
+      // var s2 = Symbol.for("lll");
+
+      // let obj = {
+      //   [s1]: "abx",
+      //   [s2]: "lll",
+      //   [s2]: "ooo",
+      // };
+      // console.log(Symbol.keyFor(s2));
+
+      // const set1 = new Set();
+      // set1.add(10);
+      // set1.add(30);
+      // set1.add(30);
+      // set1.add(20);
+      // set1.add(40);
+      // console.log(set1);
+      // set1.delete(20);
+      // console.log(set1);
+      // console.log(set1.has(30));
+
+      // set1.forEach((item) => {
+      //   console.log(item);
+      // });
+      // const set1 = new Set({ name: "下哦哦", age: 30 });
+      // console.log(set1);
+      // const weakset = new WeakSet();
+      // weakset.add({ obj0: 123 });
+      // console.log(weakset);
+      // const map1 = new Map();
+      // map1.set("obj1", 222);
+      // map1.set("obj0", 333);
+      // console.log(map1);
+
+      // const weakMap1 = new WeakMap();
+      // var obj = {};
+      // weakMap1.set(obj, "aa");
+      // console.log(weakMap1);
+      // var info = {
+      //   name: "哈哈啊",
+      // };
+      // const map1 = new Map();
+      // map1.set("opbj", 222);
+      // // var obj = {
+      // //   [info]: "aaaa",
+      // // };
+      // console.log(map1);
+
+      // const arr = ["cc", "dd", "ll"];
+      // if (arr.includes("cc")) {
+      //   alert('该数组中包含"cc');
+      // }
+
+      let obj = {
+        name: "lwy",
+        age: 18,
+        sex: "male",
+      };
+      // console.log(Object.values(obj));
+      // var newObj = Object.entries(obj);
+      // var obj2 = newObj.flatMap((item) => {
+      //   return item + "aaa";
+      // });
+      // const str = "1";
+      // //第一个参数是这个字符串是多少位的，第二个参数是填充的内容
+      // const newstr = str.padStart(2, "0");
+      // const newstr2 = str.padEnd(2, "0");
+      // console.log(newstr, newstr2);
+
+      // var newObj = Object.entries(obj);
+      // console.log(newObj);
+      // console.log(Object.fromEntries(newObj));
+      // const bigint = 9007199254740991100n; //在es11中使用BigInt(n)可以表示最大整数
+      // console.log(bigint);
+
+      // const foo = "";
+      // const result1 = foo || "默认值";
+      // const result2 = foo ?? "默认值";
+      // console.log(result1);
+      // console.log(result2);
+
+      // console.log(globalThis);
+      // let info = new WeakRef(obj);
+      // console.log(info);
+
+      // var arr = ["bb", "1211", "bbb"];
+      // for (var value of arr) {
+      //   console.log(value);
+      // }
+
+      let Fregistry = new FinalizationRegistry((value) => {
+        console.log("对象被销毁了", value);
+      });
+      Fregistry.register(obj);
+      obj = null;
+    </script>
+  </body>
+</html>

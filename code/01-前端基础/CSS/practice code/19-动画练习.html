@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .box {
+        background-color: orange;
+      }
+      .item {
+        width: 120px;
+        height: 120px;
+        background-color: #f00;
+        animation: moveAnim 5 ease-out 2s;
+      }
+      @keyframes moveAnim {
+        0% {
+          transform: translate(100px) scale(0.5) rotate(45deg);
+        }
+        33% {
+          transform: translate(150px) scale(0.4) rotate(50deg);
+        }
+        66% {
+          transform: translate(150px, 20px) scale(0.3) rotate(50deg);
+        }
+
+        100% {
+          transform: translate(0px) scale(0.4) rotate(50deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="item"></div>
+    </div>
+  </body>
+</html>
