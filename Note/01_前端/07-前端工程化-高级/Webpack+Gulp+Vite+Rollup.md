@@ -105,7 +105,7 @@ module.exports = {
 
 #### Mode配置代表更多
 
-![Mode](../../00_image/09_前端工程化高级/Mode.png)
+![Mode](../../00_Image/09_前端工程化高级/Mode.png)
 
 > webpack会根据mode配置环境的不同添加不同的属性进行操作
 
@@ -463,7 +463,7 @@ npx babel src --out-dir dist --presets=@babel/preset-env
   
 - babel编译器执行原理
 
-  ![babel编译器执行原理](../../00_image/09_前端工程化高级/Babel编译执行原理.png)
+  ![babel编译器执行原理](../../00_Image/09_前端工程化高级/Babel编译执行原理.png)
 
 ### babel-loader
 
@@ -1449,7 +1449,7 @@ Safari/537.36',
 
 打包之后的文件：
 
-![多入口打包文件](../../00_image/09_前端工程化高级/入口分包生成文件.png)
+![多入口打包文件](../../00_Image/09_前端工程化高级/入口分包生成文件.png)
 
 #### 防止重复
 
@@ -1474,7 +1474,7 @@ Safari/537.36',
 
 共享依赖生成文件:
 
-![共享依赖生成文件](../../00_image/09_前端工程化高级/共享依赖生成文件.png)
+![共享依赖生成文件](../../00_Image/09_前端工程化高级/共享依赖生成文件.png)
 
 #### 动态导入(dynamic import)
 
@@ -1680,7 +1680,7 @@ btn2.onclick = () => {
   - 更快、更可靠地将音乐、图片、视频、应用程序及其他文件发送给用户；
   - 来提供高性能、可扩展性及低成本的网络内容传递给用户
 
-![CDN](../../00_image/04_前端工程化/CDN图解.png)
+![CDN](../../00_Image/04_前端工程化/CDN图解.png)
 
 - 在开发中，我们使用CDN主要是两种方式：
   - 方式一：打包的所有静态资源，放到CDN服务器，用户所有资源都是通过CDN服务器加载的；
@@ -2090,7 +2090,7 @@ npm install purgecss-webpack-plugin -D
 
 - **1.抽取开发和生产环境的配置文件**
 
-![抽取不同环境的配置文件](../../00_image/09_前端工程化高级/抽取不同环境配置文件.png)
+![抽取不同环境的配置文件](../../00_Image/09_前端工程化高级/抽取不同环境配置文件.png)
 
 > common.js公共的配置
 >
@@ -2702,7 +2702,7 @@ module.exports = function (content) {
   - **Tapable**是官方编写和维护的一个库；
   - **Tapable**是管理着需要的Hook，这些Hook可以被应用到我们的插件中；
 
-![topable中的hooks](../../00_image/09_前端工程化高级/tabable中的hook.png)
+![topable中的hooks](../../00_Image/09_前端工程化高级/tabable中的hook.png)
 
 > - 负责整体编译流程的 Compiler 对象。
 > - 负责编译 Module 的 Compilation 对象
@@ -2798,7 +2798,7 @@ myComplier.hooks.syncHook.call("小明", 20);
   -  第三：插件方法会接收compiler对象，我们可以通过compiler对象来注册Hook的事件；
   - 第四：某些插件也会传入一个compilation的对象，我们也可以监听compilation的Hook事件；
 
-![webpack源码和自定义Plugin流程](../../00_image/09_前端工程化高级/webpack源码和自定义Plugin流程.png)
+![webpack源码和自定义Plugin流程](../../00_Image/09_前端工程化高级/webpack源码和自定义Plugin流程.png)
 
 ### 开发自己的插件
 
@@ -3527,7 +3527,7 @@ module.exports = {
   - 浏览器开始原生支持 ES 模块，且越来越多 JavaScript 工具使用编译型语言编写。
   - the rise of JavaScript tools written in compile-to-native languages
 
-![vite的底层组成构造](../../00_image/09_前端工程化高级/vite的底层组成构造.png)
+![vite的底层组成构造](../../00_Image/09_前端工程化高级/vite的底层组成构造.png)
 
 > vite在编译代码时只是简单的代码进行转化合并等操作，所有它的加载速度会很快，现在大部分浏览器支持es6语法，和esModule模块化所有vite认为在项目开发阶段没有必要做过多的构建操作
 >
@@ -3677,7 +3677,7 @@ pnpm create vite
 
 - **ESBuild的构建速度和其他构建工具速度对比：**
 
-![Esbuild的构建速度与其他工具对比](../../00_image/09_前端工程化高级/Esbuild的构建速度与其他工具对比.png)
+![Esbuild的构建速度与其他工具对比](../../00_Image/09_前端工程化高级/Esbuild的构建速度与其他工具对比.png)
 
 - **ESBuild为什么这么快呢？**
   - 使用Go语言编写的，可以直接转换成机器代码，而无需经过字节码；
