@@ -1,0 +1,1 @@
+"use strict";console.log("哈哈哈啊哈"),console.log("你好啊");var o="hello world";console.log(o),console.log("hahahah");

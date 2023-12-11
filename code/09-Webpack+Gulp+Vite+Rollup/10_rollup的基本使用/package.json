@@ -1,0 +1,23 @@
+{
+  "name": "rollup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "rollup-c --environment NODE_ENV:development -w",
+    "build": "rollup-c:--environment NODE_ENV:production"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/preset-env": "^7.23.5",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "lodash": "^4.17.21",
+    "postcss": "^8.4.32",
+    "rollup": "^4.6.1",
+    "rollup-plugin-postcss": "^4.0.2"
+  }
+}

@@ -1,0 +1,1 @@
+(self.webpackChunkbabel_core_demo=self.webpackChunkbabel_core_demo||[]).push([[443],{54:function(){var e=document.createElement("h1");e.textContent="About Page",document.body.append(e)}}]);

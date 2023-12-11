@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="fp"></div>
+    <!-- <canvas id="canvas" style="height: 1000px; width: 1000px"></canvas> -->
+    <!-- <script src="./src/main.js"></script> -->
+
+    <!-- <script src="./hybfp.js"></script> -->
+    <!-- <script>
+      const canvas = document.createElement("canvas");
+
+      const ctx = canvas.getContext("2d");
+      const fpEl = document.getElementById("fp");
+
+      function hashFunc(str, max) {
+        if (!str.length) {
+          return str;
+        }
+        let hashCode = 0;
+        for (let i = 0; i < str.length; i++) {
+          hashCode = 31 * hashCode + str.charCodeAt(i);
+        }
+        str = btoa(hashCode.toString());
+        fpEl.innerHTML = `
+                     Your Browser Finger Print: ${str}
+                     `;
+      }
+      ctx.lineWidth = 2;
+
+      ctx.fillRect(10, 10, 30, 100);
+      ctx.fillRect(80, 10, 30, 100);
+      ctx.beginPath();
+      ctx.arc(60, 65, 22, 0, Math.PI * 2, true);
+      ctx.arc(60, 65, 10, 0, Math.PI * 2, 0, true);
+
+      ctx.closePath();
+      ctx.stroke();
+
+      ctx.fillText("Hello Canvas", 200, 100, 100);
+
+      ctx.fillRect(55, 65, 10, 100);
+      console.log(canvas.toDataURL());
+      let data = canvas.toDataURL().split(",")[1];
+
+      // hashFunc(data, 7);
+      document.body.append(canvas);
+    </script> -->
+  </body>
+</html>
