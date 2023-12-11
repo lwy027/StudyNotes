@@ -169,7 +169,7 @@ module.exports = {
 };
 ```
 
-![source-map映射文件](../../00_image/09_前端工程化高级/source-map映射文件.png)
+![source-map映射文件](../../00_Image/09_前端工程化高级/source-map映射文件.png)
 
 - **第一步**：根据源文件，生成source-map文件，webpack在打包时，可以通过配置生成source-map；
 - **第二步**：在转换后的代码，最后添加一个注释，它指向sourcemap；
