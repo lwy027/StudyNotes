@@ -1,0 +1,1 @@
+{"version":3,"file":"file-slice.module.js","sourceRoot":"","sources":["../../src/11_大文件分片上传/file-slice.module.ts"],"names":[],"mappings":";;;;;;;;;AAAA,2CAAwC;AACxC,mEAA8D;AAC9D,yCAAsC;AAM/B,IAAM,eAAe,GAArB,MAAM,eAAe;CAAG,CAAA;AAAlB,0CAAe;0BAAf,eAAe;IAJ3B,IAAA,eAAM,EAAC;QACN,WAAW,EAAE,CAAC,2CAAmB,CAAC;QAClC,SAAS,EAAE,CAAC,mBAAQ,CAAC;KACtB,CAAC;GACW,eAAe,CAAG"}

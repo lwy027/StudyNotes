@@ -1,0 +1,24 @@
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"AppController {/}:","time":"2024-02-13 16:27:47","timestamp":"2024-02-13T08:27:47.238Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/, GET} route","time":"2024-02-13 16:27:47","timestamp":"2024-02-13T08:27:47.241Z"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"WinstonLogController {/winston-log}:","time":"2024-02-13 16:27:47","timestamp":"2024-02-13T08:27:47.242Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/winston-log, GET} route","time":"2024-02-13 16:27:47","timestamp":"2024-02-13T08:27:47.244Z"}
+{"context":"NestApplication","level":"\u001b[32minfo\u001b[39m","message":"Nest application successfully started","time":"2024-02-13 16:27:47","timestamp":"2024-02-13T08:27:47.246Z"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"AppController {/}:","time":"2024-02-17 09:23:49","timestamp":"2024-02-17T01:23:49.956Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/, GET} route","time":"2024-02-17 09:23:49","timestamp":"2024-02-17T01:23:49.959Z"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"WinstonLogController {/winston-log}:","time":"2024-02-17 09:23:49","timestamp":"2024-02-17T01:23:49.960Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/winston-log, GET} route","time":"2024-02-17 09:23:49","timestamp":"2024-02-17T01:23:49.961Z"}
+{"context":"NestApplication","level":"\u001b[32minfo\u001b[39m","message":"Nest application successfully started","time":"2024-02-17 09:23:49","timestamp":"2024-02-17T01:23:49.964Z"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"AppController {/}:","time":"2024-02-17 09:39:41","timestamp":"2024-02-17T01:39:41.518Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/, GET} route","time":"2024-02-17 09:39:41","timestamp":"2024-02-17T01:39:41.524Z"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"WinstonLogController {/winston-log}:","time":"2024-02-17 09:39:41","timestamp":"2024-02-17T01:39:41.525Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/winston-log, GET} route","time":"2024-02-17 09:39:41","timestamp":"2024-02-17T01:39:41.526Z"}
+{"context":"NestApplication","level":"\u001b[32minfo\u001b[39m","message":"Nest application successfully started","time":"2024-02-17 09:39:41","timestamp":"2024-02-17T01:39:41.529Z"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"AppController {/}:","time":"2024-02-23 16:26:14","timestamp":"2024-02-23T08:26:14.486Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/, GET} route","time":"2024-02-23 16:26:14","timestamp":"2024-02-23T08:26:14.489Z"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"UserController {/user}:","time":"2024-02-23 16:26:14","timestamp":"2024-02-23T08:26:14.490Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/user, POST} route","time":"2024-02-23 16:26:14","timestamp":"2024-02-23T08:26:14.491Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/user, GET} route","time":"2024-02-23 16:26:14","timestamp":"2024-02-23T08:26:14.492Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/user/:id, GET} route","time":"2024-02-23 16:26:14","timestamp":"2024-02-23T08:26:14.494Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/user/:id, PATCH} route","time":"2024-02-23 16:26:14","timestamp":"2024-02-23T08:26:14.495Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/user/:id, DELETE} route","time":"2024-02-23 16:26:14","timestamp":"2024-02-23T08:26:14.495Z"}
+{"context":"NestApplication","level":"\u001b[32minfo\u001b[39m","message":"Nest application successfully started","time":"2024-02-23 16:26:14","timestamp":"2024-02-23T08:26:14.498Z"}

@@ -1,0 +1,1 @@
+{"version":3,"file":"user.entity.js","sourceRoot":"","sources":["../../../../src/18_双token实现无感刷新/user/entities/user.entity.ts"],"names":[],"mappings":";;;;;;;;;;;;AAAA,qCAAiE;AAG1D,IAAM,IAAI,GAAV,MAAM,IAAI;CAOhB,CAAA;AAPY,oBAAI;AAEf;IADC,IAAA,gCAAsB,GAAE;;gCACd;AAEX;IADC,IAAA,gBAAM,GAAE;;sCACQ;AAEjB;IADC,IAAA,gBAAM,GAAE;;sCACQ;eANN,IAAI;IADhB,IAAA,gBAAM,GAAE;GACI,IAAI,CAOhB"}

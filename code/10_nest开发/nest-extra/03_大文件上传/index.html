@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/axios@0.24.0/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <input type="file" id="inputFile" multiple />
+
+    <script>
+      const fileEl = document.querySelector("#inputFile");
+
+      //每一次上传文件大小
+      const chunkSize = 20 * 1024;
+
+      fileEl.onchange = async function () {
+        const data = new FormData();
+        data.set("name", "lwy");
+        data.set("age", 18);
+
+        const file = fileEl.files[0];
+        //起始位置大小
+        let start = 0;
+        //分割文件数组
+        const chunks = [];
+
+        while (start < file.size) {
+          chunks.push(file.slice(start, start + chunkSize));
+          start += chunkSize;
+        }
+        //遍历chunk并且分片请求
+
+        chunks.map((chunk, index) => {
+          const data = new FormData();
+          console.log(chunk);
+          data.set("name", chunk.name + "-" + index);
+          data.append("avator", data);
+          axios.post("http://localhost:4000/file-slice/aaa", data);
+        });
+      };
+    </script>
+  </body>
+</html>

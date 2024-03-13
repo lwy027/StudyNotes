@@ -3362,7 +3362,7 @@ export default{
     //当使用app.use(插件名)进行注册插件时，内部默认会给install传递一个app
    install(app,options){
       console.Log("插件被安装："，app,options);
-      console.log(this.name)    
+      console.log(this.name)
    }    
 }
 

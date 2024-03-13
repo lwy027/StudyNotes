@@ -8,3 +8,4 @@ app.use(express.static("./dist"));
 app.listen(9000, () => {
   console.log("静态服务器启动成功");
 });
+``;

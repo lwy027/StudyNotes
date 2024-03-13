@@ -5,9 +5,9 @@ import { HeaderV2Wrapper } from './style'
 interface IProps {
   children?: ReactNode
   title?: string
-  moreText?: string
-  moreLink?: string
-}
+    moreText?: string
+    moreLink?: string
+  }
 
 const AreaHeaderV2: FC<IProps> = (props) => {
   const { title = '默认标题', moreText, moreLink } = props

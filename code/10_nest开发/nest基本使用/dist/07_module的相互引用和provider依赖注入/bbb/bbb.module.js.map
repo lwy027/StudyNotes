@@ -1,0 +1,1 @@
+{"version":3,"file":"bbb.module.js","sourceRoot":"","sources":["../../../src/07_module的相互引用和provider依赖注入/bbb/bbb.module.ts"],"names":[],"mappings":";;;;;;;;;AAAA,2CAAoD;AACpD,kDAA8C;AAMvC,IAAM,SAAS,GAAf,MAAM,SAAS;CAAG,CAAA;AAAZ,8BAAS;oBAAT,SAAS;IAJrB,IAAA,eAAM,EAAC;QAEN,OAAO,EAAE,CAAC,IAAA,mBAAU,EAAC,GAAG,EAAE,CAAC,sBAAS,CAAC,CAAC;KACvC,CAAC;GACW,SAAS,CAAG"}
